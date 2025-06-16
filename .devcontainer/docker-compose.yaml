@@ -5,7 +5,22 @@ services:
       context: .
     volumes:
       - ../:/workspaces/browse-everything:cached
-      - dev-container-node_modules:/workspaces/browse-everything/node_modules
+      - node_modules:/workspaces/browse-everything/node_modules
     command: sleep infinity
+    depends_on:
+      - db
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    env_file:
+      - ./.env
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
 volumes:
-  dev-container-node_modules:
+  node_modules:
+  postgres-data:
