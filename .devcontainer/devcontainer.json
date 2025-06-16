@@ -25,5 +25,6 @@
         "GitHub.copilot-chat"
       ]
     }
-  }
+  },
+  "postCreateCommand": "sudo chown node node_modules"
 }

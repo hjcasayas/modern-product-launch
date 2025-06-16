@@ -137,3 +137,6 @@ dist
 
 # pnpm
 .pnpm-store
+
+# Mac
+DS_Store
