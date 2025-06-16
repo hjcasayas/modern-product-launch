@@ -1,8 +1,11 @@
 services:
-  dev-container-ts:
+  dev-container:
     build:
       dockerfile: Dockerfile
       context: .
     volumes:
-      - ../:/workspaces/dev-container-ts:cached
+      - ../:/workspaces/browse-everything:cached
+      - dev-container-node_modules:/workspaces/browse-everything/node_modules
     command: sleep infinity
+volumes:
+  dev-container-node_modules:

@@ -1,16 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-  "name": "Dev Container for TS",
+  "name": "Browse Everything with Strapi and Next.js",
   "dockerComposeFile": "docker-compose.yaml",
-  "service": "dev-container-ts",
+  "service": "dev-container",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "mounts": [
-    {
-      "source": "${localWorkspaceFolderBasename}-node_modules",
-      "target": "${containerWorkspaceFolder}/node_modules",
-      "type": "volume"
-    },
     {
       "source": "${localEnv:HOME}/.ssh",
       "target": "/home/node/.ssh",
@@ -25,9 +20,10 @@
         "rvest.vs-code-prettier-eslint",
         "christian-kohler.path-intellisense",
         "humao.rest-client",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
       ]
     }
-  },
-  "postCreateCommand": "sudo chown node node_modules && npm install"
+  }
 }
