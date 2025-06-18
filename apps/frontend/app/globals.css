@@ -1,26 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import "tailwindcss";
 
 :root {
+  --font-dm-sans: "DM Sans", sans-serif;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+  --dark-moss-green: #485c11;
+  --moss-green: #8e9c78;
+  --nyanza: #dfecc6 --platinum: #6f6f6f --silver: #cecece;
 }
 
 @theme inline {
+  --font-dm-sans: var(--font-dm-sans);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --dark-moss-green: var(--dark-moss-green);
+  --moss-green: var(--moss-green);
+  --nyanza: var(--nyanza);
+  --platinum: var(--platinum);
+  --silver: var(--silver);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-dm-sans);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
