@@ -6,9 +6,39 @@ services:
     volumes:
       - ../:/workspaces/browse-everything:cached
       - node_modules:/workspaces/browse-everything/node_modules
+      - cms-node_modules:/workspaces/browse-everything/apps/cms/node_modules
+      - frontend-node_modules:/workspaces/browse-everything/apps/frontend/node_modules
     command: sleep infinity
     depends_on:
       - db
+  cms:
+    build:
+      dockerfile: ./apps/cms/Dockerfile
+      context: ../
+    volumes:
+      - ../:/app
+      - node_modules:/app/node_modules
+      - cms-node_modules:/app/apps/cms/node_modules
+      - frontend-node_modules:/app/apps/frontend/node_modules
+    restart: always
+    depends_on:
+      - dev-container
+    ports:
+      - 1337:1337
+  frontend:
+    build:
+      dockerfile: ./apps/frontend/Dockerfile
+      context: ../
+    volumes:
+      - ../:/app
+      - node_modules:/app/node_modules
+      - cms-node_modules:/app/apps/cms/node_modules
+      - frontend-node_modules:/app/apps/frontend/node_modules
+    restart: always
+    depends_on:
+      - cms
+    ports:
+      - 3000:3000
   db:
     image: postgres
     restart: always
@@ -23,4 +53,6 @@ services:
       - postgres-data:/var/lib/postgresql/data
 volumes:
   node_modules:
+  cms-node_modules:
+  frontend-node_modules:
   postgres-data:

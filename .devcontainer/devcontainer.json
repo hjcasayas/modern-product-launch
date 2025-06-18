@@ -26,5 +26,5 @@
       ]
     }
   },
-  "postCreateCommand": "sudo chown node node_modules"
+  "postCreateCommand": "sudo chown -R node node_modules apps/cms/node_modules apps/frontend/node_modules && pnpm install"
 }
