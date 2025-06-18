@@ -1,5 +1,4 @@
 node_modules
-dist
 .pnpm-store
 .DS_Store
 
@@ -14,5 +13,5 @@ build
 .strapi-cloud.json
 
 # Next.js build artifacts
-/.next/
-/out/
+.next
+out
