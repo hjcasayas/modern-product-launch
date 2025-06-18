@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint-staged": "lint-staged",
-    "git:commit": "cz"
+    "git:commit": "cz",
+    "dev:frontend": "pnpm --filter @browse-everything/frontend run dev",
+    "dev:cms": "pnpm --filter @browse-everything/cms run dev"
   },
   "repository": {
     "type": "git",
