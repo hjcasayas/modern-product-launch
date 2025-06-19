@@ -7,6 +7,7 @@ import { graphqlRequest } from "@/gql/graphql-request";
 import { HeaderComponent } from "@/components/layout/header.component";
 
 import "./globals.css";
+import { FooterComponent } from "@/components/layout/footer.component";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,6 +28,7 @@ export default async function RootLayout({
       <body className="mx-auto max-w-7xl">
         <HeaderComponent {...global.header} />
         {children}
+        <FooterComponent {...global.footer} />
       </body>
     </html>
   );
