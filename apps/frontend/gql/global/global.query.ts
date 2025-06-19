@@ -26,6 +26,22 @@ export const globalQuery = gql`
           }
         }
       }
+      footer {
+        logo {
+          alternativeText
+          url
+        }
+        navigation {
+          id
+          label
+          url
+          isExternal
+        }
+        copyrightSymbol
+        copyrightText
+        copyrightYear
+        websiteName
+      }
     }
   }
 `;
