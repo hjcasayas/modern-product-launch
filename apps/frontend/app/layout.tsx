@@ -24,7 +24,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className="mx-auto max-w-7xl">
         <HeaderComponent {...global.header} />
         {children}
       </body>
