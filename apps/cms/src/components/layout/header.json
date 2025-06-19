@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_layout_headers",
+  "info": {
+    "displayName": "Header"
+  },
+  "options": {},
+  "attributes": {
+    "websiteName": {
+      "type": "component",
+      "component": "element.website-name",
+      "repeatable": false,
+      "required": true
+    },
+    "navigation": {
+      "type": "component",
+      "component": "element.link",
+      "repeatable": true,
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "element.cta-button",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

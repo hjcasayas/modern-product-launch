@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_element_website_names",
+  "info": {
+    "displayName": "Website Name"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
