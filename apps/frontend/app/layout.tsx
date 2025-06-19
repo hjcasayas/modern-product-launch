@@ -4,7 +4,7 @@ import { GlobalSingleType } from "@/gql/global/global.interface";
 import { globalQuery } from "@/gql/global/global.query";
 import { graphqlRequest } from "@/gql/graphql-request";
 
-import { HeaderComponent } from "@/components/layout/header-component";
+import { HeaderComponent } from "@/components/layout/header.component";
 
 import "./globals.css";
 
