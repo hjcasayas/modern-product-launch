@@ -23,7 +23,7 @@
   --color-platinum: var(--platinum);
   --color-dim-gray: var(--dim-gray);
   --color-silver: var(--silver);
-  --color-breakpoint-md: 50rem;
+  --breakpoint-md: 50rem;
 }
 
 @layer base {
