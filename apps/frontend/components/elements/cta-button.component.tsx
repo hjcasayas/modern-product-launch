@@ -1,7 +1,8 @@
+import Image from "next/image";
+
 import { ElementCtaButton } from "@/interfaces/elements/cta-button.interface";
 import { cn } from "@/utils/cn.util";
-import Image from "next/image";
-import Link from "next/link";
+import { LinkComponent } from "./link.component";
 
 export interface CtaButtonProps extends ElementCtaButton {
   className?: string;
@@ -12,10 +13,11 @@ export const CtaButtonComponent = ({
   url,
   icon,
   className,
+  isExternal = false,
 }: CtaButtonProps) => {
   return (
-    <Link
-      href={url}
+    <LinkComponent
+      {...{ url, label, isExternal, id: "" }}
       className={cn(
         "bg-dark-moss-green group inline-block rounded-full px-[22px] py-3.5 text-white",
         className
@@ -37,6 +39,6 @@ export const CtaButtonComponent = ({
           />
         ) : null}
       </div>
-    </Link>
+    </LinkComponent>
   );
 };

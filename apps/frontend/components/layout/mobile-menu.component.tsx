@@ -1,10 +1,12 @@
 "use client";
 
+import { useRef } from "react";
+
 import { ElementCtaButton } from "@/interfaces/elements/cta-button.interface";
 import { ElementLink } from "@/interfaces/elements/link.interface";
-import { useRef } from "react";
-import { CtaButtonComponent } from "../elements/cta-button";
-import Link from "next/link";
+
+import { CtaButtonComponent } from "../elements/cta-button.component";
+import { LinkComponent } from "../elements/link.component";
 
 export interface MobileMenuComponentProps {
   navigation: ElementLink[];
@@ -38,12 +40,12 @@ export const MobileMenuComponent = ({
         <ul className="pb-8 pt-2">
           {navigation.map((link) => (
             <li key={link.id}>
-              <Link
+              <LinkComponent
+                {...link}
                 className="border-platinum block border-t-[1px] py-[30px] text-sm font-bold"
-                href={link.url}
               >
                 {link.label}
-              </Link>
+              </LinkComponent>
             </li>
           ))}
         </ul>
