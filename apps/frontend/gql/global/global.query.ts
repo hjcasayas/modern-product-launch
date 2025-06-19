@@ -20,6 +20,10 @@ export const globalQuery = gql`
           label
           url
           isExternal
+          icon {
+            url
+            alternativeText
+          }
         }
       }
     }
