@@ -11,9 +11,11 @@ export const HeaderComponent = ({
 }: LayoutHeader) => {
   return (
     <header>
-      <div className="px-5 pb-8 pt-5 md:px-10">
-        <div className="relative flex items-start justify-between pb-12 md:items-center">
-          <h1 className="text-3xl font-medium">{websiteName}</h1>
+      <div className="md:px-10 md:pb-8 md:pt-5">
+        <div className="rounded-4xl relative flex items-start justify-between pb-12 shadow-2xl md:items-center md:rounded-none md:shadow-none">
+          <h1 className="pl-5 pt-5 text-4xl font-medium md:pl-0 md:pt-0">
+            {websiteName}
+          </h1>
           <MobileMenuComponent cta={cta} navigation={navigation} />
           <MenuComponent cta={cta} navigation={navigation} />
         </div>
