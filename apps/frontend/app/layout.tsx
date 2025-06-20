@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 
 import { GlobalSingleType } from "@/gql/global/global.interface";
-import { globalQuery } from "@/gql/global/global.query";
 import { graphqlRequest } from "@/gql/graphql-request";
+import { globalQuery } from "@/gql/global/global.query";
 
 import { HeaderComponent } from "@/components/layout/header.component";
+import { FooterComponent } from "@/components/layout/footer.component";
 
 import "./globals.css";
-import { FooterComponent } from "@/components/layout/footer.component";
-import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",
