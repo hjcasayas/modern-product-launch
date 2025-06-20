@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_benefits",
+  "info": {
+    "displayName": "Benefits"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "modules": {
+      "type": "component",
+      "component": "layout.module",
+      "repeatable": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  },
+  "config": {}
+}
