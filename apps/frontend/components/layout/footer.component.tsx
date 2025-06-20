@@ -12,7 +12,7 @@ export const FooterComponent = ({
   websiteName,
 }: LayoutFooter) => {
   return (
-    <footer className="flex flex-col justify-between gap-y-20 px-4 py-10 md:gap-y-[90px] md:px-10 md:py-[50px]">
+    <footer className="flex flex-col justify-between gap-y-20 px-5 py-10 md:gap-y-[90px] md:px-10 md:py-[50px]">
       <nav>
         <ul className="flex flex-col items-start justify-between gap-y-7 md:flex-row md:justify-start md:gap-x-7">
           {navigation.map((link) => (
