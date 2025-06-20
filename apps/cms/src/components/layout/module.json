@@ -9,7 +9,7 @@
       "type": "string",
       "required": true
     },
-    "logo": {
+    "icon": {
       "type": "media",
       "multiple": false,
       "required": true,
