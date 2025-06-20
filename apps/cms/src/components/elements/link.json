@@ -1,5 +1,5 @@
 {
-  "collectionName": "components_element_links",
+  "collectionName": "components_elements_links",
   "info": {
     "displayName": "Link"
   },
@@ -9,7 +9,7 @@
       "type": "string",
       "required": true
     },
-    "url": {
+    "href": {
       "type": "string",
       "required": true
     },
