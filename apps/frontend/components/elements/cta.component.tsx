@@ -4,7 +4,7 @@ import { ElementCta } from "@/interfaces/elements/cta.interface";
 import { cn } from "@/utils/cn.util";
 import { LinkComponent } from "./link.component";
 
-export interface CtaButtonProps extends ElementCta {
+export interface CtaComponentProps extends ElementCta {
   className?: string;
 }
 
@@ -12,7 +12,7 @@ export const CtaComponent = ({
   link: { href, label, isExternal, id },
   icon,
   className,
-}: CtaButtonProps) => {
+}: CtaComponentProps) => {
   return (
     <LinkComponent
       {...{ href, label, isExternal, id }}
