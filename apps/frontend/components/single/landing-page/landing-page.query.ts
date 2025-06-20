@@ -30,6 +30,18 @@ export const landingPageQuery = gql`
             height
           }
         }
+        ... on ComponentBlocksLogoCloud {
+          __typename
+          title
+          id
+          logoClouds {
+            documentId
+            url
+            alternativeText
+            width
+            height
+          }
+        }
       }
     }
   }
