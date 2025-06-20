@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import "tailwindcss";
 
 :root {
-  --font-dm-sans: "DM Sans", sans-serif;
+  --dm-sans: "DM Sans", sans-serif;
+  --crimson-text: "Crimson Text", serif;
   --background: #ffffff;
   --foreground: #000000;
   --dark-moss-green: #485c11;
@@ -14,7 +16,8 @@
 }
 
 @theme inline {
-  --font-dm-sans: var(--font-dm-sans);
+  --font-dm-sans: var(--dm-sans);
+  --font-crimson-text: var(--crimson-text);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-dark-moss-green: var(--dark-moss-green);
