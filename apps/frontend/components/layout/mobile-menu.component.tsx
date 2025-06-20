@@ -32,9 +32,9 @@ export const MobileMenuComponent = ({
         onClick={handleClick}
         className="group peer block cursor-pointer p-[5px]"
       >
-        <div className="relative h-1 w-5 rounded-full bg-black transition-all group-open:top-2 group-open:rotate-45"></div>
-        <div className="mt-1 h-1 w-5 rounded-full bg-black opacity-100 transition-all group-open:opacity-0"></div>
-        <div className="relative mt-1 h-1 w-5 rounded-full bg-black transition-all group-open:-top-2 group-open:-rotate-45"></div>
+        <div className="relative h-[2.4px] w-[18px] rounded-full bg-black transition-all group-open:top-[4.8px] group-open:rotate-45"></div>
+        <div className="mt-[2.4px] h-[2.4px] w-[18px] rounded-full bg-black opacity-100 transition-all group-open:opacity-0"></div>
+        <div className="relative mt-[2.4px] h-[2.4px] w-[18px] rounded-full bg-black transition-all group-open:-top-[4.8px] group-open:-rotate-45"></div>
       </button>
       <nav className="absolute left-0 top-[84px] hidden w-full bg-white transition-all peer-open:block">
         <ul className="pb-8 pt-2">
