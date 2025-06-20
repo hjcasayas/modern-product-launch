@@ -2,15 +2,15 @@
 
 import { useRef } from "react";
 
-import { ElementCtaButton } from "@/interfaces/elements/cta-button.interface";
+import { ElementCta } from "@/interfaces/elements/cta.interface";
 import { ElementLink } from "@/interfaces/elements/link.interface";
 
-import { CtaButtonComponent } from "../elements/cta-button.component";
+import { CtaComponent } from "../elements/cta.component";
 import { LinkComponent } from "../elements/link.component";
 
 export interface MobileMenuComponentProps {
   navigation: ElementLink[];
-  cta: ElementCtaButton;
+  cta: ElementCta;
 }
 
 export const MobileMenuComponent = ({
@@ -49,7 +49,7 @@ export const MobileMenuComponent = ({
             </li>
           ))}
         </ul>
-        <CtaButtonComponent {...cta} className="mt-12" />
+        <CtaComponent {...cta} className="mt-12" />
       </nav>
     </div>
   );
