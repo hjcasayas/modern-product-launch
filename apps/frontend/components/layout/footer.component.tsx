@@ -1,7 +1,7 @@
-import Image from "next/image";
-
 import { LayoutFooter } from "@/interfaces/layout/footer.interface";
+
 import { LinkComponent } from "../elements/link.component";
+import { ImageLoader } from "../image-loader";
 
 export const FooterComponent = ({
   navigation,
@@ -12,7 +12,7 @@ export const FooterComponent = ({
   websiteName,
 }: LayoutFooter) => {
   return (
-    <footer className="flex flex-col justify-between gap-y-20 px-5 py-10 md:gap-y-[90px] md:px-10 md:py-[50px]">
+    <footer className="flex flex-col justify-between gap-y-20 px-4 py-10 md:gap-y-[90px] md:px-10 md:py-[50px]">
       <nav>
         <ul className="flex flex-col items-start justify-between gap-y-7 md:flex-row md:justify-start md:gap-x-7">
           {navigation.map((link) => (
@@ -24,12 +24,8 @@ export const FooterComponent = ({
       </nav>
       <div className="text-dark-moss-green flex items-end justify-between text-xs">
         <div className="flex flex-row items-end justify-between gap-x-10">
-          <Image
-            src={
-              logo.url.startsWith("http")
-                ? logo.url
-                : `${process.env.NEXT_PUBLIC_STRAPI_URL}${logo.url}`
-            }
+          <ImageLoader
+            src={logo.url}
             alt={logo.alternativeText ?? ""}
             width={31.75}
             height={70}
