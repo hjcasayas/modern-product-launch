@@ -7,7 +7,7 @@ WORKDIR /app
 
 FROM node:22-alpine3.22 AS development
 WORKDIR /app
-RUN npm i -g pnpm@latest
+RUN corepack enable
 CMD [ "pnpm","run", "dev:frontend" ]
 
 FROM base AS prod-deps
@@ -15,7 +15,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-l
 
 FROM base AS build
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
-RUN pnpm run build
+RUN pnpm run build:frontend
 
 FROM base
 COPY --from=prod-deps /app/node_modules /app/node_modules
