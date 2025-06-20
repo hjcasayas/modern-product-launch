@@ -5,21 +5,21 @@ export const globalQuery = gql`
     global {
       header {
         id
-        websiteName {
-          id
-          name
-        }
+        websiteName
         navigation {
           id
           label
-          url
+          href
           isExternal
         }
         cta {
           id
-          label
-          url
-          isExternal
+          link {
+            id
+            label
+            href
+            isExternal
+          }
           icon {
             url
             alternativeText
@@ -34,7 +34,7 @@ export const globalQuery = gql`
         navigation {
           id
           label
-          url
+          href
           isExternal
         }
         copyrightSymbol
