@@ -14,7 +14,7 @@ export const ImageLoader = ({ className, ...linkProps }: ImageLoaderProps) => {
     <Image
       {...linkProps}
       src={getStrapiImage(linkProps.src)}
-      className={`relative mx-auto block ${className}`}
+      className={className}
       loader={imageLoaderProp}
     />
   );
