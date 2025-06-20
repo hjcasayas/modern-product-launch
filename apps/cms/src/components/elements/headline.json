@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_elements_headlines",
+  "info": {
+    "displayName": "Headline"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
