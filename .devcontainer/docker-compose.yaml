@@ -15,6 +15,7 @@ services:
     build:
       dockerfile: ./apps/cms/Dockerfile
       context: ../
+      target: development
     volumes:
       - ../:/app
       - node_modules:/app/node_modules
@@ -29,6 +30,7 @@ services:
     build:
       dockerfile: ./apps/frontend/Dockerfile
       context: ../
+      target: development
     volumes:
       - ../:/app
       - node_modules:/app/node_modules

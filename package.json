@@ -7,7 +7,11 @@
     "lint-staged": "lint-staged",
     "git:commit": "cz",
     "dev:frontend": "pnpm --filter @browse-everything/frontend run dev",
+    "build:frontend": "pnpm --filter @browse-everything/frontend run build",
+    "start:frontend": "pnpm --filter @browse-everything/frontend run start",
     "dev:cms": "pnpm --filter @browse-everything/cms run dev",
+    "build:cms": "pnpm --filter @browse-everything/cms run build",
+    "start:cms": "pnpm --filter @browse-everything/cms run start",
     "prettier-watch": "onchange \"apps/frontend/**/*.tsx\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "repository": {
