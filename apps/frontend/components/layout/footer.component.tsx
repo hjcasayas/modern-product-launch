@@ -26,7 +26,7 @@ export const FooterComponent = ({
         <div className="flex flex-row items-end justify-between gap-x-10">
           <Image
             src={
-              process.env.NODE_ENV === "production"
+              logo.url.startsWith("http")
                 ? logo.url
                 : `${process.env.NEXT_PUBLIC_STRAPI_URL}${logo.url}`
             }

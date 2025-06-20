@@ -27,9 +27,9 @@ export const CtaComponent = ({
           <Image
             className="transition-all group-hover:-translate-y-2"
             src={
-              process.env.NODE_ENV === "production"
-                ? icon?.url
-                : `${process.env.NEXT_PUBLIC_STRAPI_URL}${icon?.url}`
+              icon.url.startsWith("http")
+                ? icon.url
+                : `${process.env.NEXT_PUBLIC_STRAPI_URL}${icon.url}`
             }
             alt={icon.alternativeText ?? ""}
             width={6}
