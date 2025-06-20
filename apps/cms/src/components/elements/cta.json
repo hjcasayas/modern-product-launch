@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_ctas",
+  "info": {
+    "displayName": "CTA"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false,
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  },
+  "config": {}
+}
