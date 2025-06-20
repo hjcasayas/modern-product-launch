@@ -20,20 +20,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let global: GlobalSingleType;
-  try {
-    const { global: globalData } = await graphqlRequest<{
-      global: GlobalSingleType;
-    }>(globalQuery);
-
-    global = globalData;
-
-    if (global == null) {
-      notFound();
-    }
-  } catch (_error) {
-    notFound();
-  }
+  const { global } = await graphqlRequest<{
+    global: GlobalSingleType;
+  }>(globalQuery);
 
   return (
     <html lang="en">
