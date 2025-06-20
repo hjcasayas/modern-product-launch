@@ -1,12 +1,12 @@
-import { ElementCtaButton } from "@/interfaces/elements/cta-button.interface";
+import { ElementCta } from "@/interfaces/elements/cta.interface";
 import { ElementLink } from "@/interfaces/elements/link.interface";
 
-import { CtaButtonComponent } from "../elements/cta-button.component";
+import { CtaComponent } from "../elements/cta.component";
 import { LinkComponent } from "../elements/link.component";
 
 export interface MenuComponentProps {
   navigation: ElementLink[];
-  cta: ElementCtaButton;
+  cta: ElementCta;
 }
 
 export const MenuComponent = ({ navigation, cta }: MenuComponentProps) => {
@@ -24,7 +24,7 @@ export const MenuComponent = ({ navigation, cta }: MenuComponentProps) => {
           </li>
         ))}
       </ul>
-      <CtaButtonComponent {...cta} />
+      <CtaComponent {...cta} />
     </div>
   );
 };
