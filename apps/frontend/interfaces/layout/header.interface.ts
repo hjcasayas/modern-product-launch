@@ -1,9 +1,8 @@
-import { ElementCtaButton } from "../elements/cta-button.interface";
+import { ElementCta } from "../elements/cta.interface";
 import { ElementLink } from "../elements/link.interface";
-import { ElementWebsiteName } from "../elements/website-name.interface";
 
 export interface LayoutHeader {
-  websiteName: ElementWebsiteName;
+  websiteName: string;
   navigation: ElementLink[];
-  cta: ElementCtaButton;
+  cta: ElementCta;
 }

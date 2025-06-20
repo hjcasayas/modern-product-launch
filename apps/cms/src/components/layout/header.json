@@ -6,21 +6,19 @@
   "options": {},
   "attributes": {
     "websiteName": {
+      "type": "string",
+      "required": true
+    },
+    "cta": {
       "type": "component",
-      "component": "element.website-name",
+      "component": "elements.cta",
       "repeatable": false,
       "required": true
     },
     "navigation": {
       "type": "component",
-      "component": "element.link",
+      "component": "elements.link",
       "repeatable": true,
-      "required": true
-    },
-    "cta": {
-      "type": "component",
-      "component": "element.cta-button",
-      "repeatable": false,
       "required": true
     }
   },
