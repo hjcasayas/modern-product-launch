@@ -1,3 +1,3 @@
 export interface StrapiBase {
-  id: string;
+  id: number;
 }
