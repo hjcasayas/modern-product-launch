@@ -8,6 +8,7 @@ import { HeaderComponent } from "@/components/layout/header.component";
 
 import "./globals.css";
 import { FooterComponent } from "@/components/layout/footer.component";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,9 +20,20 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { global } = await graphqlRequest<{ global: GlobalSingleType }>(
-    globalQuery
-  );
+  let global: GlobalSingleType;
+  try {
+    const { global: globalData } = await graphqlRequest<{
+      global: GlobalSingleType;
+    }>(globalQuery);
+
+    global = globalData;
+
+    if (global == null) {
+      notFound();
+    }
+  } catch (_error) {
+    notFound();
+  }
 
   return (
     <html lang="en">
