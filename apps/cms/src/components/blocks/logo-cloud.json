@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_logo_clouds",
+  "info": {
+    "displayName": "Logo Cloud"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "logos": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": ["images"]
+    }
+  },
+  "config": {}
+}
