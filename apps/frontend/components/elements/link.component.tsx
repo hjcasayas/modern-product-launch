@@ -8,7 +8,7 @@ export interface LinkComponentProps extends ElementLink {
 
 export const LinkComponent = ({
   label,
-  url,
+  href,
   isExternal = false,
   className,
   children,
@@ -16,7 +16,7 @@ export const LinkComponent = ({
   return (
     <Link
       className={className}
-      href={url}
+      href={href}
       target={isExternal ? "_blank" : "_self"}
       rel={isExternal ? "noopener noreferrer" : ""}
     >
