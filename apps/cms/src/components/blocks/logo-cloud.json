@@ -9,7 +9,7 @@
       "type": "string",
       "required": true
     },
-    "logos": {
+    "logoClouds": {
       "type": "media",
       "multiple": true,
       "required": true,
