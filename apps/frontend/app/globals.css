@@ -5,6 +5,7 @@
 :root {
   --dm-sans: "DM Sans", sans-serif;
   --crimson-text: "Crimson Text", serif;
+  --roboto-mono: "Roboto Mono", monospace;
   --background: #ffffff;
   --foreground: #000000;
   --dark-moss-green: #485c11;
@@ -18,6 +19,7 @@
 @theme inline {
   --font-dm-sans: var(--dm-sans);
   --font-crimson-text: var(--crimson-text);
+  --font-roboto-mono: var(--roboto-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-dark-moss-green: var(--dark-moss-green);
