@@ -42,6 +42,30 @@ export const landingPageQuery = gql`
             height
           }
         }
+        ... on ComponentBlocksBenefits {
+          __typename
+          id
+          title
+          headline
+          subTitle
+          modules {
+            id
+            title
+            icon {
+              url
+              alternativeText
+              width
+              height
+            }
+            description
+          }
+          image {
+            url
+            alternativeText
+            width
+            height
+          }
+        }
       }
     }
   }
