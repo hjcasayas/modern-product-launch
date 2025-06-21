@@ -5,9 +5,14 @@ services:
       context: .
     volumes:
       - ../:/workspaces/browse-everything:cached
-      - node_modules:/workspaces/browse-everything/node_modules
-      - cms-node_modules:/workspaces/browse-everything/apps/cms/node_modules
+      - workspace-node_modules:/workspaces/browse-everything/node_modules
+      - workspace-pnpm-store:/workspaces/browse-everything/.pnpm-store
       - frontend-node_modules:/workspaces/browse-everything/apps/frontend/node_modules
+      - frontend-next:/workspaces/browse-everything/apps/frontend/.next
+      - cms-node_modules:/workspaces/browse-everything/apps/cms/node_modules
+      - cms-dist:/workspaces/browse-everything/apps/cms/dist
+      - cms-strapi:/workspaces/browse-everything/apps/cms/.strapi
+      - cms-types:/workspaces/browse-everything/apps/cms/types
     command: sleep infinity
     depends_on:
       - db
@@ -18,9 +23,14 @@ services:
       target: development
     volumes:
       - ../:/app
-      - node_modules:/app/node_modules
-      - cms-node_modules:/app/apps/cms/node_modules
+      - workspace-node_modules:/app/node_modules
+      - workspace-pnpm-store:/app/.pnpm-store
       - frontend-node_modules:/app/apps/frontend/node_modules
+      - frontend-next:/app/apps/frontend/.next
+      - cms-node_modules:/app/apps/cms/node_modules
+      - cms-dist:/app/apps/cms/dist
+      - cms-strapi:/app/apps/cms/.strapi
+      - cms-types:/app/apps/cms/types
     restart: always
     depends_on:
       - dev-container
@@ -33,9 +43,14 @@ services:
       target: development
     volumes:
       - ../:/app
-      - node_modules:/app/node_modules
-      - cms-node_modules:/app/apps/cms/node_modules
+      - workspace-node_modules:/app/node_modules
+      - workspace-pnpm-store:/app/.pnpm-store
       - frontend-node_modules:/app/apps/frontend/node_modules
+      - frontend-next:/app/apps/frontend/.next
+      - cms-node_modules:/app/apps/cms/node_modules
+      - cms-dist:/app/apps/cms/dist
+      - cms-strapi:/app/apps/cms/.strapi
+      - cms-types:/app/apps/cms/types
     restart: always
     depends_on:
       - cms
@@ -54,7 +69,12 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
 volumes:
-  node_modules:
-  cms-node_modules:
-  frontend-node_modules:
   postgres-data:
+  workspace-node_modules:
+  workspace-pnpm-store:
+  frontend-node_modules:
+  frontend-next:
+  cms-node_modules:
+  cms-dist:
+  cms-strapi:
+  cms-types:
