@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -53,4 +52,36 @@
   &:is(:where(.peer):is(.open, [open], :popover-open, :open) ~ *) {
     @slot;
   }
+}
+
+@utility text-display-statistics {
+  @apply font-dm-sans desktop:text-[5rem] text-[4rem] leading-none -tracking-[0.04];
+}
+
+@utility text-display {
+  @apply font-crimson-text tablet:text-[8.75rem] desktop:text-[10rem] dektop:leading-[0.85] tablet:leading-[0.80] tablet:-tracking-[0.05] text-[4.75rem] leading-[0.85] -tracking-[0.045];
+}
+
+@utility text-h1 {
+  @apply font-crimson-text desktop:text-6xl tablet:text-[3.375rem] tablet:leading-[0.9] text-[3.125rem] leading-[0.95] -tracking-[0.03];
+}
+
+@utility text-h2 {
+  @apply font-crimson-text tablet:text[2.5rem] desktop:leading-[1.05] text-[2rem] leading-[1.1] -tracking-[0.04];
+}
+
+@utility text-h3 {
+  @apply font-crimson-text text-lg leading-none -tracking-[0.03];
+}
+
+@utility text-paragraph {
+  @apply font-dm-sans text-[0.9375rem] leading-[1.4] -tracking-wider;
+}
+
+@utility text-link {
+  @apply font-dm-sans text-sm font-bold leading-[1.4] -tracking-tight;
+}
+
+@utility text-caption {
+  @apply font-roboto-mono tablet:text-[0.6875rem] desktop:text-xs text-[0.65625rem] leading-[1.4] -tracking-[0.03];
 }
