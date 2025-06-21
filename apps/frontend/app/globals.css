@@ -29,8 +29,8 @@
 }
 
 @theme {
-  --tablet: 50rem;
-  --desktop: 80rem;
+  --breakpoint-tablet: 50rem;
+  --breakpoint-desktop: 80rem;
 }
 
 @layer base {
