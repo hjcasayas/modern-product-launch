@@ -3,7 +3,7 @@ import { LogoCloudBlock } from "./logo-cloud.interface";
 
 export const LogoCloudComponent = ({ title, logoClouds }: LogoCloudBlock) => {
   return (
-    <section className="px-4 py-12">
+    <section className="px-4 py-12 md:px-10">
       <h2 className="text-dim-gray text-center text-base leading-5 tracking-[-0.05em]">
         {title}
       </h2>
