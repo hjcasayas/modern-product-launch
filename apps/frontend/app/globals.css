@@ -26,7 +26,11 @@
   --color-platinum: var(--platinum);
   --color-dim-gray: var(--dim-gray);
   --color-silver: var(--silver);
-  --breakpoint-md: 50rem;
+}
+
+@theme {
+  --tablet: 50rem;
+  --desktop: 80rem;
 }
 
 @layer base {
