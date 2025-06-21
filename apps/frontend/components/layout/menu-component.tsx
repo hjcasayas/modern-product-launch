@@ -11,7 +11,7 @@ export interface MenuComponentProps {
 
 export const MenuComponent = ({ navigation, cta }: MenuComponentProps) => {
   return (
-    <div className="tablet:flex hidden w-3/4 flex-row items-center justify-between lg:w-[70%]">
+    <div className="tablet:flex hidden w-[76%] flex-row items-center justify-between lg:w-[70%]">
       <ul className="tablet:flex hidden flex-row gap-x-5 px-6 py-5">
         {navigation.map((link) => (
           <li key={link.id}>
