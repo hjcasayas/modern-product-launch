@@ -8,18 +8,18 @@ export const HeroComponent = ({
   desktopImage,
 }: HeroBlock) => {
   return (
-    <section className="px-4 pt-[14px] md:px-10">
-      <h1 className="font-crimson-text flex flex-col items-center justify-center xl:flex-row xl:gap-x-6">
+    <section className="tablet:px-10 px-4 pt-[14px]">
+      <h1 className="font-crimson-text desktop:flex-row desktop:gap-x-6 flex flex-col items-center justify-center">
         {headlines.map((headline, index) => (
           <span
             key={headline.id || index}
-            className="leading-16 md:leading-28 inline-block text-[4.75rem] tracking-[-0.045em] md:text-[8.75rem] md:tracking-[-0.05em] xl:text-[11rem] xl:leading-[9.35rem]"
+            className="leading-16 tablet:leading-28 tablet:text-[8.75rem] tablet:tracking-[-0.05em] desktop:text-[11rem] desktop:leading-[9.35rem] inline-block text-[4.75rem] tracking-[-0.045em]"
           >
             {headline.text}
           </span>
         ))}
       </h1>
-      <div className="relative mt-[4.5rem] block md:hidden">
+      <div className="tablet:hidden relative mt-[4.5rem] block">
         <div className="bg-moss-green absolute bottom-0 left-0 right-0 h-[22.5rem] rounded-[1.875rem]"></div>
         <ImageLoader
           src={mobileImage.url}
@@ -29,7 +29,7 @@ export const HeroComponent = ({
           className="relative mx-auto block"
         />
       </div>
-      <div className="relative mt-20 hidden md:block xl:hidden">
+      <div className="tablet:block desktop:hidden relative mt-20 hidden">
         <div className="bg-moss-green absolute bottom-0 left-0 right-0 h-[22.5rem] rounded-[1.875rem]"></div>
         <ImageLoader
           src={tabletImage.url}
@@ -39,7 +39,7 @@ export const HeroComponent = ({
           className="relative mx-auto block"
         />
       </div>
-      <div className="relative mt-24 hidden xl:block">
+      <div className="desktop:block relative mt-24 hidden">
         <div className="bg-moss-green absolute bottom-0 left-0 right-0 h-[22.5rem] rounded-[1.875rem]"></div>
         <ImageLoader
           src={desktopImage.url}

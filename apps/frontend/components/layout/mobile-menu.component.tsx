@@ -25,7 +25,7 @@ export const MobileMenuComponent = ({
   };
 
   return (
-    <div className="block md:hidden">
+    <div className="tablet:hidden block">
       <button
         ref={menuBurgerRef}
         type="button"
@@ -38,7 +38,7 @@ export const MobileMenuComponent = ({
           <div className="relative mt-[2.4px] h-[2.4px] w-[18px] rounded-full bg-black transition-all group-open:-top-[4.8px] group-open:-rotate-45"></div>
         </div>
       </button>
-      <nav className="absolute left-0 top-20 hidden w-full bg-white px-5 pb-8 pt-2 transition-all peer-open:block">
+      <nav className="absolute left-0 top-20 z-10 hidden w-full bg-white px-5 pb-8 pt-2 transition-all peer-open:block">
         <ul className="pb-8 pt-2">
           {navigation.map((link) => (
             <li key={link.id}>
