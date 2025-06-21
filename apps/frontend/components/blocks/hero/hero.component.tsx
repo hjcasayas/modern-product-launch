@@ -11,10 +11,7 @@ export const HeroComponent = ({
     <section className="tablet:px-10 px-4 pt-[14px]">
       <h1 className="font-crimson-text desktop:flex-row desktop:gap-x-6 flex flex-col items-center justify-center">
         {headlines.map((headline, index) => (
-          <span
-            key={headline.id || index}
-            className="leading-16 tablet:leading-28 tablet:text-[8.75rem] tablet:tracking-[-0.05em] desktop:text-[11rem] desktop:leading-[9.35rem] inline-block text-[4.75rem] tracking-[-0.045em]"
-          >
+          <span key={headline.id || index} className="display">
             {headline.text}
           </span>
         ))}

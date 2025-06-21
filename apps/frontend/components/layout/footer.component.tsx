@@ -17,7 +17,7 @@ export const FooterComponent = ({
         <ul className="tablet:flex-row tablet:justify-start tablet:gap-x-7 flex flex-col items-start justify-between gap-y-7">
           {navigation.map((link) => (
             <li key={link.id}>
-              <LinkComponent className="text-sm font-bold" {...link} />
+              <LinkComponent {...link} />
             </li>
           ))}
         </ul>

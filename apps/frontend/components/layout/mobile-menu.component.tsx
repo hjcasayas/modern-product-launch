@@ -44,7 +44,7 @@ export const MobileMenuComponent = ({
             <li key={link.id}>
               <LinkComponent
                 {...link}
-                className="border-platinum block border-t-[1px] py-[30px] text-sm font-bold"
+                className="border-platinum block border-t-[1px] py-[30px]"
               >
                 {link.label}
               </LinkComponent>

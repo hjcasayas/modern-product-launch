@@ -1,4 +1,5 @@
 import { ElementLink } from "@/interfaces/elements/link.interface";
+import { cn } from "@/utils/cn.util";
 import Link from "next/link";
 
 export interface LinkComponentProps extends ElementLink {
@@ -15,7 +16,7 @@ export const LinkComponent = ({
 }: LinkComponentProps) => {
   return (
     <Link
-      className={className}
+      className={cn("link", className)}
       href={href}
       target={isExternal ? "_blank" : "_self"}
       rel={isExternal ? "noopener noreferrer" : ""}

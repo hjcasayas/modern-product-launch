@@ -15,10 +15,7 @@ export const MenuComponent = ({ navigation, cta }: MenuComponentProps) => {
       <ul className="tablet:flex hidden flex-row gap-x-5 px-6 py-5">
         {navigation.map((link) => (
           <li key={link.id}>
-            <LinkComponent
-              {...link}
-              className="border-platinum block text-sm font-bold"
-            >
+            <LinkComponent {...link} className="border-divider block">
               {link.label}
             </LinkComponent>
           </li>

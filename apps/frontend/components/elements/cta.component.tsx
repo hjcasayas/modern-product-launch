@@ -18,7 +18,7 @@ export const CtaComponent = ({
     <LinkComponent
       {...{ href, label, isExternal, id }}
       className={cn(
-        "bg-dark-moss-green group inline-block rounded-full px-[22px] py-3.5 text-white",
+        "bg-dark-moss-green text-on-accent group inline-block rounded-full px-[22px] py-3.5",
         className
       )}
     >
