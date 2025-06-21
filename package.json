@@ -12,7 +12,7 @@
     "dev:cms": "pnpm --filter @browse-everything/cms run dev",
     "build:cms": "pnpm --filter @browse-everything/cms run build",
     "start:cms": "pnpm --filter @browse-everything/cms run start",
-    "prettier-watch": "onchange \"apps/frontend/**/*.tsx\" -- prettier --write --ignore-unknown {{changed}}"
+    "prettier-watch": "onchange \"apps/frontend/**/*.{tsx,css}\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "repository": {
     "type": "git",
