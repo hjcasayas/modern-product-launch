@@ -21,6 +21,8 @@ export const globalQuery = gql`
             isExternal
           }
           icon {
+            height
+            width
             url
             alternativeText
           }
