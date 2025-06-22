@@ -7,9 +7,12 @@ import { ElementLink } from "@/interfaces/elements/link.interface";
 
 import { CtaComponent } from "../elements/cta.component";
 import { LinkComponent } from "../elements/link.component";
+import { StrapiBase } from "@/interfaces/strapi/base.interface";
+
+export interface MobileMenuLink extends ElementLink, StrapiBase {}
 
 export interface MobileMenuComponentProps {
-  navigation: ElementLink[];
+  navigation: MobileMenuLink[];
   cta: ElementCta;
 }
 

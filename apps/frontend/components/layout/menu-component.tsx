@@ -3,9 +3,12 @@ import { ElementLink } from "@/interfaces/elements/link.interface";
 
 import { CtaComponent } from "../elements/cta.component";
 import { LinkComponent } from "../elements/link.component";
+import { StrapiBase } from "@/interfaces/strapi/base.interface";
+
+export interface MenuLink extends ElementLink, StrapiBase {}
 
 export interface MenuComponentProps {
-  navigation: ElementLink[];
+  navigation: MenuLink[];
   cta: ElementCta;
 }
 
