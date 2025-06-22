@@ -7,18 +7,25 @@ import { ImageLoader } from "../image-loader";
 
 export interface CtaComponentProps extends ElementCta {
   className?: string;
+  variant?: "primary" | "secondary";
 }
 
 export const CtaComponent = ({
-  link: { href, label, isExternal, id },
+  link: { href, label, isExternal },
   icon,
   className,
+  variant = "primary",
 }: CtaComponentProps) => {
+  const variants = {
+    primary: "bg-dark-moss-green text-on-accent",
+    secondary: "bg-accent-2 link",
+  };
   return (
     <LinkComponent
-      {...{ href, label, isExternal, id }}
+      {...{ href, label, isExternal }}
       className={cn(
-        "bg-dark-moss-green text-on-accent group inline-block rounded-full px-[22px] py-3.5",
+        "hover:bg-accent-3 hover:text-on-accent group inline-block rounded-full px-[22px] py-3.5 transition-all duration-300 ease-in-out",
+        variants[variant],
         className
       )}
     >
