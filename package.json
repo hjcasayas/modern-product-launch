@@ -12,7 +12,13 @@
     "dev:cms": "pnpm --filter @browse-everything/cms run dev",
     "build:cms": "pnpm --filter @browse-everything/cms run build",
     "start:cms": "pnpm --filter @browse-everything/cms run start",
-    "prettier-watch": "onchange \"apps/frontend/**/*.{tsx,css}\" -- prettier --write --ignore-unknown {{changed}}"
+    "prettier-watch": "onchange \"apps/frontend/**/*.{tsx,css}\" -- prettier --write --ignore-unknown {{changed}}",
+    "docker:build:frontend": "docker compose -f docker-compose.frontend.yaml build",
+    "docker:push:frontend": "docker compose -f docker-compose.frontend.yaml push",
+    "docker:build:cms": "docker compose -f docker-compose.cms.yaml build",
+    "docker:push:cms": "docker compose -f docker-compose.cms.yaml push",
+    "docker:deploy:frontend": "docker compose -f docker-compose.frontend.yaml up -d",
+    "docker:deploy:cms": "docker compose -f docker-compose.cms.yaml up -d"
   },
   "repository": {
     "type": "git",

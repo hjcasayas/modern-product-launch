@@ -1,29 +1,15 @@
 services:
-  frontend:
-    depends_on:
-      - cms
-    restart: unless-stopped
-    image: hjcasayas/browse-everything-frontend:v0.0.0
-    build:
-      context: .
-      dockerfile: ./apps/frontend/Dockerfile
-      tags:
-        - hjcasayas/browse-everything-frontend:latest
-        - hjcasayas/browse-everything-frontend:v0.0.0
-      platforms:
-        - linux/amd64
-        - linux/arm64
   cms:
     depends_on:
       - db
     restart: unless-stopped
-    image: hjcasayas/browse-everything-cms:v0.0.0
+    image: hjcasayas/browse-everything-cms:v0.1.0
     build:
       context: .
       dockerfile: ./apps/cms/Dockerfile
       tags:
         - hjcasayas/browse-everything-cms:latest
-        - hjcasayas/browse-everything-cms:v0.0.0
+        - hjcasayas/browse-everything-cms:v0.1.0
       platforms:
         - linux/amd64
         - linux/arm64
@@ -39,15 +25,7 @@ services:
       - POSTGRES_DB=${POSTGRES_DB}
     volumes:
       - prod-postgres-data:/var/lib/postgresql/data
-  cloudflare-fe:
-    image: cloudflare/cloudflared
-    restart: unless-stopped
-    command: tunnel run
-    env_file:
-      - ./.env
-    environment:
-      - TUNNEL_TOKEN=${TUNNEL_TOKEN_FE}
-  cloudflare-cms:
+  cloudflare:
     image: cloudflare/cloudflared
     restart: unless-stopped
     command: tunnel run

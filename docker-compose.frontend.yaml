@@ -1,0 +1,21 @@
+services:
+  frontend:
+    restart: unless-stopped
+    image: hjcasayas/browse-everything-frontend:v0.1.0
+    build:
+      context: .
+      dockerfile: ./apps/frontend/Dockerfile
+      tags:
+        - hjcasayas/browse-everything-frontend:latest
+        - hjcasayas/browse-everything-frontend:v0.1.0
+      platforms:
+        - linux/amd64
+        - linux/arm64
+  cloudflare:
+    image: cloudflare/cloudflared
+    restart: unless-stopped
+    command: tunnel run
+    env_file:
+      - ./.env
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN_FE}
