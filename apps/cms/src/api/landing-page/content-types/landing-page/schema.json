@@ -13,7 +13,12 @@
   "attributes": {
     "blocks": {
       "type": "dynamiczone",
-      "components": ["blocks.hero", "blocks.logo-cloud", "blocks.benefits"],
+      "components": [
+        "blocks.hero",
+        "blocks.logo-cloud",
+        "blocks.benefits",
+        "blocks.specifications"
+      ],
       "required": true
     }
   }

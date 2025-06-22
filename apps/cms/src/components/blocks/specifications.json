@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blocks_specifications",
+  "info": {
+    "displayName": "Specifications"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "list": {
+      "type": "component",
+      "component": "elements.list-item-text",
+      "repeatable": true,
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.cta",
+      "repeatable": false,
+      "required": true
+    },
+    "carousel": {
+      "type": "component",
+      "component": "layout.carousel",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}
