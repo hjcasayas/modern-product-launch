@@ -10,3 +10,5 @@ export default async function HomePage() {
 
   return <BlockRenderer {...landingPage} />;
 }
+
+export const revalidate = 0;

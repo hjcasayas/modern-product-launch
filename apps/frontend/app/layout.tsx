@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 
-import { GlobalSingleType } from "@/gql/global/global.interface";
-import { graphqlRequest } from "@/gql/graphql-request";
-import { globalQuery } from "@/gql/global/global.query";
-
-import { HeaderComponent } from "@/components/layout/header.component";
-import { FooterComponent } from "@/components/layout/footer.component";
+import { Providers } from "@/components/providers";
+import { LayoutComponent } from "@/components/layout.component";
 
 import "./globals.css";
 
@@ -19,16 +15,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { global } = await graphqlRequest<{
-    global: GlobalSingleType;
-  }>(globalQuery);
-
   return (
     <html lang="en">
       <body className="mx-auto max-w-7xl">
-        <HeaderComponent {...global.header} />
-        {children}
-        <FooterComponent {...global.footer} />
+        <Providers>
+          <LayoutComponent>{children}</LayoutComponent>
+        </Providers>
       </body>
     </html>
   );
