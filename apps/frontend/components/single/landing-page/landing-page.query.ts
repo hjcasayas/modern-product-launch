@@ -66,6 +66,49 @@ export const landingPageQuery = gql`
             height
           }
         }
+        ... on ComponentBlocksFeatures {
+          __typename
+          id
+          headline
+          description
+          featuresList {
+            text
+          }
+          cta {
+            link {
+              label
+              href
+              isExternal
+            }
+            icon {
+              alternativeText
+              url
+              height
+              width
+            }
+          }
+          carousel {
+            rightArrowIcon {
+              alternativeText
+              url
+              width
+              height
+            }
+            leftArrowIcon {
+              alternativeText
+              url
+              width
+              height
+            }
+            images {
+              documentId
+              alternativeText
+              url
+              width
+              height
+            }
+          }
+        }
       }
     }
   }
