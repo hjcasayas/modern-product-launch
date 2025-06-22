@@ -32,6 +32,9 @@
   --color-link: var(--color-foreground);
   --color-divider: var(--color-platinum);
   --color-on-accent: var(--on-accent);
+  --color-background: var(--background);
+  --color-accent-2: var(--color-nyanza);
+  --color-accent-3: var(--moss-green);
 }
 
 @theme {
