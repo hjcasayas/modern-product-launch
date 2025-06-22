@@ -33,12 +33,12 @@ export const MobileMenuComponent = ({
         className="group peer block cursor-pointer pr-5 pt-5"
       >
         <div className="p-[5px]">
-          <div className="relative h-[2.4px] w-[18px] rounded-full bg-black transition-all group-open:top-[4.8px] group-open:rotate-45"></div>
-          <div className="mt-[2.4px] h-[2.4px] w-[18px] rounded-full bg-black opacity-100 transition-all group-open:opacity-0"></div>
-          <div className="relative mt-[2.4px] h-[2.4px] w-[18px] rounded-full bg-black transition-all group-open:-top-[4.8px] group-open:-rotate-45"></div>
+          <div className="relative h-[2.4px] w-[18px] rounded-full bg-black transition-all duration-300 ease-in-out group-open:top-[4.8px] group-open:rotate-45"></div>
+          <div className="mt-[2.4px] h-[2.4px] w-[18px] rounded-full bg-black opacity-100 transition-all duration-300 ease-in-out group-open:opacity-0"></div>
+          <div className="relative mt-[2.4px] h-[2.4px] w-[18px] rounded-full bg-black transition-all duration-300 ease-in-out group-open:-top-[4.8px] group-open:-rotate-45"></div>
         </div>
       </button>
-      <nav className="absolute left-0 top-20 z-10 hidden w-full bg-white px-5 pb-8 pt-2 transition-all peer-open:block">
+      <nav className="top-15 absolute left-0 z-10 hidden w-full bg-white px-5 pb-8 pt-9 transition-all duration-300 ease-in-out peer-open:block">
         <ul className="pb-8 pt-2">
           {navigation.map((link) => (
             <li key={link.id}>
