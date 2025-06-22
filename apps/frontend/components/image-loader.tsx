@@ -10,6 +10,15 @@ export interface ImageLoaderProps extends ImageProps {
 
 export const ImageLoader = ({ className, ...linkProps }: ImageLoaderProps) => {
   return (
-    <Image {...linkProps} className={className} loader={imageLoaderProp} />
+    <Image
+      {...linkProps}
+      className={className}
+      loader={imageLoaderProp}
+      alt={
+        linkProps.alt == null || linkProps.alt.trim() === ""
+          ? "Image"
+          : linkProps.alt
+      }
+    />
   );
 };

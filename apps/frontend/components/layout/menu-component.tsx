@@ -1,14 +1,11 @@
 import { ElementCta } from "@/interfaces/elements/cta.interface";
-import { ElementLink } from "@/interfaces/elements/link.interface";
+import { HeaderLink } from "@/interfaces/layout/header.interface";
 
 import { CtaComponent } from "../elements/cta.component";
 import { LinkComponent } from "../elements/link.component";
-import { StrapiBase } from "@/interfaces/strapi/base.interface";
-
-export interface MenuLink extends ElementLink, StrapiBase {}
 
 export interface MenuComponentProps {
-  navigation: MenuLink[];
+  navigation: HeaderLink[];
   cta: ElementCta;
 }
 

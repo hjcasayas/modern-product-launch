@@ -19,6 +19,7 @@ export const HeroComponent = ({
       <div className="tablet:hidden relative mt-[4.5rem] block">
         <div className="bg-moss-green absolute bottom-0 left-0 right-0 h-[22.5rem] rounded-[1.875rem]"></div>
         <ImageLoader
+          priority
           src={mobileImage.url}
           alt={mobileImage.alternativeText ?? ""}
           width={mobileImage.width}
@@ -29,6 +30,7 @@ export const HeroComponent = ({
       <div className="tablet:block desktop:hidden relative mt-20 hidden">
         <div className="bg-moss-green absolute bottom-0 left-0 right-0 h-[22.5rem] rounded-[1.875rem]"></div>
         <ImageLoader
+          priority
           src={tabletImage.url}
           alt={tabletImage.alternativeText ?? ""}
           width={tabletImage.width}
@@ -39,6 +41,7 @@ export const HeroComponent = ({
       <div className="desktop:block relative mt-24 hidden">
         <div className="bg-moss-green absolute bottom-0 left-0 right-0 h-[22.5rem] rounded-[1.875rem]"></div>
         <ImageLoader
+          priority
           src={desktopImage.url}
           alt={desktopImage.alternativeText ?? ""}
           width={desktopImage.width}

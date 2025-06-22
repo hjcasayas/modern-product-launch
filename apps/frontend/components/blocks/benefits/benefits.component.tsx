@@ -1,7 +1,5 @@
 import { ImageLoader } from "@/components/image-loader";
 import { BenefitsBlock } from "./benefits.interface";
-import Module from "module";
-import { ModuleComponent } from "@/components/layout/module/module.component";
 import { BenefitsHeadingComponent } from "./benefits-heading.component";
 import { BenefitsModulesComponent } from "./benefits-modules.component";
 
@@ -10,7 +8,7 @@ export const BenefitsComponent = ({
   headline,
   subTitle,
   modules,
-  image: { url, alternativeText, width, height },
+  image: { url, alternativeText },
 }: BenefitsBlock) => {
   return (
     <section className="tablet:px-10 px-4 pb-[6.25rem] pt-20">

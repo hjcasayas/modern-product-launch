@@ -3,16 +3,13 @@
 import { useRef } from "react";
 
 import { ElementCta } from "@/interfaces/elements/cta.interface";
-import { ElementLink } from "@/interfaces/elements/link.interface";
+import { HeaderLink } from "@/interfaces/layout/header.interface";
 
-import { CtaComponent } from "../elements/cta.component";
 import { LinkComponent } from "../elements/link.component";
-import { StrapiBase } from "@/interfaces/strapi/base.interface";
-
-export interface MobileMenuLink extends ElementLink, StrapiBase {}
+import { CtaComponent } from "../elements/cta.component";
 
 export interface MobileMenuComponentProps {
-  navigation: MobileMenuLink[];
+  navigation: HeaderLink[];
   cta: ElementCta;
 }
 
