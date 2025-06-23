@@ -19,7 +19,8 @@
         "blocks.benefits",
         "blocks.features",
         "blocks.specifications",
-        "blocks.testimonial"
+        "blocks.testimonial",
+        "blocks.how-it-works"
       ],
       "required": true
     }
