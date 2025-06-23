@@ -16,8 +16,8 @@ export const ModuleComponent = ({
       <ImageLoader
         src={icon.url}
         alt={icon.alternativeText || "Module Icon"}
-        width={icon.width}
-        height={icon.height}
+        width={24}
+        height={24}
       />
       <h4 className="heading-3 mt-6">{title}</h4>
       <p className="paragraph text-paragraph mt-5">{description}</p>
