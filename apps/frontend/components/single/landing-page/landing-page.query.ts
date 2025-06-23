@@ -188,6 +188,25 @@ export const landingPageQuery = gql`
             height
           }
         }
+        ... on ComponentBlocksContactUs {
+          __typename
+          id
+          headline
+          description
+          cta {
+            icon {
+              alternativeText
+              url
+              height
+              width
+            }
+            link {
+              label
+              href
+              isExternal
+            }
+          }
+        }
       }
     }
   }
