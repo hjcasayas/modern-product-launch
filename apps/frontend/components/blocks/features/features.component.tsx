@@ -12,7 +12,7 @@ export const FeaturesBlockComponent = ({
   carousel,
 }: FeaturesBlock) => {
   return (
-    <section className="tablet:pb-[7.5rem] px-4 pb-[6.25rem]">
+    <section className="tablet:pb-[7.5rem] tablet:px-10 px-4 pb-[6.25rem]">
       <div className="desktop:grid-cols-2 grid grid-cols-1 items-start gap-5">
         <div className="pb-20 pt-[3.75rem]">
           <FeaturesHeadingComponent {...{ headline, description }} />
