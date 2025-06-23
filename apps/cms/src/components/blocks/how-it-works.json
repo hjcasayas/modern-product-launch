@@ -20,6 +20,12 @@
       "component": "layout.list-item-title-description",
       "repeatable": true,
       "required": true
+    },
+    "hero": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
     }
   },
   "config": {}
