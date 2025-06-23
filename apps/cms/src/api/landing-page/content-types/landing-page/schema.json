@@ -17,8 +17,8 @@
         "blocks.hero",
         "blocks.logo-cloud",
         "blocks.benefits",
-        "blocks.specifications",
-        "blocks.features"
+        "blocks.features",
+        "blocks.specifications"
       ],
       "required": true
     }
