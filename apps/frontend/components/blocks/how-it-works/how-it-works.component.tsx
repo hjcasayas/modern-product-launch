@@ -19,8 +19,10 @@ export const HowItWorksBlockComponent = ({
 }: HowItWorksBlockComponentProps) => {
   return (
     <section id="how-to">
-      <HowItWorksHeadingComponent {...{ headline, cta }} />
-      <HowItWorksStepsListComponent stepsList={stepsList} />
+      <div className="tablet:pb-7.5rem border-t-1 border-divider flex flex-col gap-y-20 pb-[6.25rem] pt-20">
+        <HowItWorksHeadingComponent {...{ headline, cta }} />
+        <HowItWorksStepsListComponent stepsList={stepsList} />
+      </div>
       <HowItWorksHeroComponent hero={hero} />
     </section>
   );
