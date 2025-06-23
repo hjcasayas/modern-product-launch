@@ -34,8 +34,6 @@ A modern landing page for product launch designed by Figma.
 
 ## Todos
 
-- [ ] Specifications Table Section
-- [ ] Testimonial Section
 - [ ] How it works Section
 - [ ] Hero Image
 - [ ]Centered Call To Action
