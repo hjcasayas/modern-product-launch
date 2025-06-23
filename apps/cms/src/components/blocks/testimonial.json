@@ -14,7 +14,7 @@
     "testimony": {
       "type": "component",
       "component": "layout.testimony",
-      "repeatable": true,
+      "repeatable": false,
       "required": true
     }
   },
