@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_how_it_works",
+  "info": {
+    "displayName": "How It Works"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.cta",
+      "repeatable": false,
+      "required": true
+    },
+    "stepsList": {
+      "type": "component",
+      "component": "layout.list-item-title-description",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}
