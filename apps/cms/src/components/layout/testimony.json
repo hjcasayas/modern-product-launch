@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_testimonies",
+  "info": {
+    "displayName": "Testimony"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "occupation": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
