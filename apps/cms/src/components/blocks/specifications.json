@@ -9,14 +9,12 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
+    "headline": {
+      "type": "string",
       "required": true
     },
-    "list": {
-      "type": "component",
-      "component": "elements.list-item-text",
-      "repeatable": true,
+    "description": {
+      "type": "text",
       "required": true
     },
     "cta": {
@@ -25,10 +23,10 @@
       "repeatable": false,
       "required": true
     },
-    "carousel": {
+    "specifications": {
       "type": "component",
-      "component": "layout.carousel",
-      "repeatable": false,
+      "component": "layout.specification-column",
+      "repeatable": true,
       "required": true
     }
   },
