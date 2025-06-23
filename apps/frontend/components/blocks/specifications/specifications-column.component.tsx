@@ -37,9 +37,7 @@ export const SpecificationsColumnComponent = ({
             width={14}
             height={14}
           />
-          <span className="font-['Roboto_Mono',monospace] text-xs text-black">
-            Ultra-fast browsing
-          </span>
+          <span className="caption text-headline">{item.text}</span>
         </div>
       ))}
     </div>
