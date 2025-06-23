@@ -11,9 +11,7 @@ export const BenefitsHeadingComponent = ({
 }: BenefitsHeadingProps) => {
   return (
     <div>
-      <h3 id="benefits" className="caption scroll-mt-28">
-        {title}
-      </h3>
+      <h3 className="caption">{title}</h3>
       <h2 className="heading-1 mt-[3.125rem]">{headline}</h2>
       <p className="paragraph mt-[1.875rem]">{subTitle}</p>
     </div>

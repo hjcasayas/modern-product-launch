@@ -18,7 +18,10 @@ export const SpecificationsBlockComponent = ({
   specifications,
 }: SpecificationsBlockComponentProps) => {
   return (
-    <section className="border-t-1 border-divider flex flex-col gap-y-5 pb-[7.5rem]">
+    <section
+      id="specifications"
+      className="border-t-1 border-divider flex flex-col gap-y-5 pb-[7.5rem]"
+    >
       <SpecificationsContentComponent
         {...{ title, headline, description, cta }}
       />
