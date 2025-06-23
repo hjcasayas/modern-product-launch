@@ -39,6 +39,7 @@
   --color-accent-3: var(--moss-green);
   --color-accent-4: var(--foreground);
   --color-accent-5: var(--dim-gray);
+  --color-accent-6: var(--silver);
 }
 
 @theme {
