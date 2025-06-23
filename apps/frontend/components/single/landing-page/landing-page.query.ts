@@ -159,6 +159,29 @@ export const landingPageQuery = gql`
             quote
           }
         }
+        ... on ComponentBlocksHowItWorks {
+          __typename
+          id
+          headline
+          cta {
+            icon {
+              alternativeText
+              height
+              url
+              width
+            }
+            link {
+              href
+              isExternal
+              label
+            }
+          }
+          stepsList {
+            id
+            title
+            description
+          }
+        }
       }
     }
   }
