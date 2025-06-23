@@ -3,8 +3,8 @@
 import { useReactQuery } from "@/hooks/use-react-query.hook";
 import { FooterComponent } from "./layout/footer.component";
 import { HeaderComponent } from "./layout/header.component";
-import { GlobalSingleType } from "@/gql/global/global.interface";
-import { globalQuery } from "@/gql/global/global.query";
+import { GlobalSingleType } from "@/components/single/global/global.interface";
+import { globalQuery } from "@/components/single/global/global.query";
 
 export interface LayoutProps {
   children: React.ReactNode;
