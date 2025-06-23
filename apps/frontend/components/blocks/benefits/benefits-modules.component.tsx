@@ -1,11 +1,9 @@
 import { ModuleComponent } from "@/components/layout/module/module.component";
-import { ModuleLayout } from "@/components/layout/module/module.interface";
+import { BenefitsBlockComponentProps } from "./benefits.component";
 
 export const BenefitsModulesComponent = ({
   modules,
-}: {
-  modules: ModuleLayout[];
-}) => {
+}: Pick<BenefitsBlockComponentProps, "modules">) => {
   return (
     <div className="tablet:grid-cols-2 desktop:grid-cols-4 grid grid-cols-1 gap-5 pb-[3.75rem] pt-[3.125rem]">
       {modules.map((module) => (
