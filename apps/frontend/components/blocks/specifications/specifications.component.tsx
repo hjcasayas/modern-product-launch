@@ -2,8 +2,8 @@ import { StrapiBlock } from "@/interfaces/strapi/block.interface";
 import { StrapiBase } from "@/interfaces/strapi/base.interface";
 
 import { SpecificationsContentComponent } from "./specifications-content.component";
+import { SpecificationsTableComponent } from "./specifications-table.component";
 import { SpecificationsBlock } from "./specifications.interface";
-import { SpecificationsColumnComponent } from "./specifications-column.component";
 
 export interface SpecificationsBlockComponentProps
   extends SpecificationsBlock,
@@ -22,14 +22,7 @@ export const SpecificationsBlockComponent = ({
       <SpecificationsContentComponent
         {...{ title, headline, description, cta }}
       />
-      <div className="tablet:px-10 flex scroll-m-10 flex-row overflow-x-auto px-5">
-        {specifications.map((specification) => (
-          <SpecificationsColumnComponent
-            key={specification.id}
-            {...specification}
-          />
-        ))}
-      </div>
+      <SpecificationsTableComponent specifications={specifications} />
     </section>
   );
 };
