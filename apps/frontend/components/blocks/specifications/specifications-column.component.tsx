@@ -9,7 +9,7 @@ export const SpecificationsColumnComponent = ({
 }: ColumnLayout) => {
   return (
     <div
-      className={cn("w-full min-w-[12.5rem]", {
+      className={cn("w-full min-w-[13.75rem]", {
         "border-divider rounded-2xl border shadow": isEmphasized,
       })}
     >
@@ -26,7 +26,7 @@ export const SpecificationsColumnComponent = ({
       {list.map((item) => (
         <div
           className={cn(
-            "border-divider flex items-center gap-2 border-b px-[1.875rem] py-8",
+            "border-divider flex items-center gap-2 border-b py-8 pl-[1.875rem]",
             { "last:border-b-0": isEmphasized }
           )}
           key={item.id}
