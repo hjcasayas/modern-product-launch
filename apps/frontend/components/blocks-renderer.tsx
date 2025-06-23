@@ -14,7 +14,6 @@ import {
   FeaturesBlockComponent,
   FeaturesBlockComponentProps,
 } from "./blocks/features/features.component";
-import { FeaturesBlock } from "./blocks/features/features.interface";
 import {
   SpecificationsBlockComponent,
   SpecificationsBlockComponentProps,

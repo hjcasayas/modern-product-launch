@@ -1,4 +1,3 @@
-import { ImageLoader } from "@/components/image-loader";
 import { TestimonialBlock } from "./testimonial.interface";
 import { StrapiBase } from "@/interfaces/strapi/base.interface";
 import { StrapiBlock } from "@/interfaces/strapi/block.interface";
