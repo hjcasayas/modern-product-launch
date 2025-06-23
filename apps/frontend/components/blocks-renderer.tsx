@@ -19,6 +19,10 @@ import {
   SpecificationsBlockComponent,
   SpecificationsBlockComponentProps,
 } from "./blocks/specifications/specifications.component";
+import {
+  TestimonialBlockComponent,
+  TestimonialBlockComponentProps,
+} from "./blocks/testimonial/testimonial.component";
 
 export const BlockNames = {
   ComponentBlocksHero: "ComponentBlocksHero",
@@ -26,6 +30,7 @@ export const BlockNames = {
   ComponentBlocksBenefits: "ComponentBlocksBenefits",
   ComponentBlocksFeatures: "ComponentBlocksFeatures",
   ComponentBlocksSpecifications: "ComponentBlocksSpecifications",
+  ComponentBlocksTestimonial: "ComponentBlocksTestimonial",
 } as const;
 
 export type BlockNameType = keyof typeof BlockNames;
@@ -36,6 +41,7 @@ export type BlockRendererProps = (
   | BenefitsBlockComponentProps
   | FeaturesBlockComponentProps
   | SpecificationsBlockComponentProps
+  | TestimonialBlockComponentProps
 )[];
 
 export const BlockRenderer = ({ blocks }: { blocks: BlockRendererProps }) => {
@@ -74,6 +80,15 @@ export const BlockRenderer = ({ blocks }: { blocks: BlockRendererProps }) => {
             const currentBlock = block as SpecificationsBlockComponentProps;
             return (
               <SpecificationsBlockComponent
+                key={currentBlock.id}
+                {...currentBlock}
+              />
+            );
+          }
+          case "ComponentBlocksTestimonial": {
+            const currentBlock = block as TestimonialBlockComponentProps;
+            return (
+              <TestimonialBlockComponent
                 key={currentBlock.id}
                 {...currentBlock}
               />
