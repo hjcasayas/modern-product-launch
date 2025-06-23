@@ -34,6 +34,5 @@ A modern landing page for product launch designed by Figma.
 
 ## Todos
 
-- [ ] Hero Image
 - [ ] Centered Call To Action
 - [ ] Fix issue in specifications table where texts move down which makes the row broken
