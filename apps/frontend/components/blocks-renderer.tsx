@@ -1,7 +1,9 @@
 import { BenefitsComponent } from "./blocks/benefits/benefits.component";
 import { BenefitsBlock } from "./blocks/benefits/benefits.interface";
-import { HeroComponent } from "./blocks/hero/hero.component";
-import { HeroBlock } from "./blocks/hero/hero.interface";
+import {
+  HeroBlockComponentProps,
+  HeroComponent,
+} from "./blocks/hero/hero.component";
 import { LogoCloudComponent } from "./blocks/logo-cloud/logo-cloud.component";
 import { LogoCloudBlock } from "./blocks/logo-cloud/logo-cloud.interface";
 import { FeaturesBlockComponent } from "./blocks/features/features.component";
@@ -17,7 +19,7 @@ export const BlockNames = {
 export type BlockNameType = keyof typeof BlockNames;
 
 export type BlockRendererProps = (
-  | HeroBlock
+  | HeroBlockComponentProps
   | LogoCloudBlock
   | BenefitsBlock
   | FeaturesBlock
@@ -29,7 +31,7 @@ export const BlockRenderer = ({ blocks }: { blocks: BlockRendererProps }) => {
       {blocks.map((block) => {
         switch (block.__typename) {
           case "ComponentBlocksHero": {
-            const currentBlock = block as HeroBlock;
+            const currentBlock = block as HeroBlockComponentProps;
             return <HeroComponent key={currentBlock.id} {...currentBlock} />;
           }
           case "ComponentBlocksLogoCloud": {

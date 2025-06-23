@@ -1,12 +1,21 @@
-import { HeroBlock } from "./hero.interface";
+import { StrapiBlock } from "@/interfaces/strapi/block.interface";
+import { StrapiBase } from "@/interfaces/strapi/base.interface";
+
 import { ImageLoader } from "@/components/image-loader";
+
+import { HeroBlock } from "./hero.interface";
+
+export interface HeroBlockComponentProps
+  extends HeroBlock,
+    StrapiBase,
+    StrapiBlock {}
 
 export const HeroComponent = ({
   headlines,
   mobileImage,
   tabletImage,
   desktopImage,
-}: HeroBlock) => {
+}: HeroBlockComponentProps) => {
   return (
     <section className="tablet:px-10 px-4 pt-[14px]">
       <h1 className="font-crimson-text desktop:flex-row desktop:gap-x-6 flex flex-col items-center justify-center">

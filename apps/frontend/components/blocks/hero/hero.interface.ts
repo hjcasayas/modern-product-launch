@@ -6,7 +6,7 @@ export interface HeadlineElement extends StrapiBase {
   text: string;
 }
 
-export interface HeroBlock extends StrapiBase, StrapiBlock {
+export interface HeroBlock {
   headlines: HeadlineElement[];
   mobileImage: StrapiImage;
   tabletImage: StrapiImage;
