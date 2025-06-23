@@ -5,7 +5,7 @@ export const SpecificationsTableComponent = ({
   specifications,
 }: Pick<SpecificationsBlock, "specifications">) => {
   return (
-    <div className="tablet:px-10 flex scroll-m-10 flex-row overflow-x-auto px-5">
+    <div className="tablet:px-10 flex flex-row overflow-x-auto px-5">
       {specifications.map((specification) => (
         <SpecificationsColumnComponent
           key={specification.id}

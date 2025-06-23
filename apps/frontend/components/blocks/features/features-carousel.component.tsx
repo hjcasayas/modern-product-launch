@@ -21,7 +21,7 @@ export const FeaturesCarouselComponent = ({
   };
 
   return (
-    <div className="relative snap-x">
+    <div className="desktop:w-1/2 relative w-full snap-x">
       <div className="absolute right-[30px] top-[30px] z-10 flex flex-row items-center gap-x-4">
         <FeaturesCarouselButton
           onClick={() => handleClick("left")}

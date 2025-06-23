@@ -20,8 +20,8 @@ export const FeaturesBlockComponent = ({
 }: FeaturesBlockComponentProps) => {
   return (
     <section className="tablet:pb-[7.5rem] tablet:px-10 px-4 pb-[6.25rem]">
-      <div className="desktop:grid-cols-2 grid grid-cols-1 items-start gap-5">
-        <div className="pb-20 pt-[3.75rem]">
+      <div className="desktop:flex-row flex flex-col gap-5">
+        <div className="desktop:w-1/2 w-full pb-20 pt-[3.75rem]">
           <FeaturesHeadingComponent {...{ headline, description }} />
           <FeaturesListComponent {...{ featuresList }} />
           <CtaComponent link={cta.link} className="mt-10" variant="secondary" />

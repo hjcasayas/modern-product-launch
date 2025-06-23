@@ -15,7 +15,7 @@ export const TestimonialBlockComponent = ({
   testimony,
 }: TestimonialBlockComponentProps) => {
   return (
-    <div className="tablet:px-10 desktop:grid-cols-2 grid grid-cols-1 gap-x-5 gap-y-10 px-5 pb-[6.25rem]">
+    <div className="tablet:px-10 desktop:flex-row flex flex-col gap-x-5 gap-y-10 px-5 pb-[6.25rem]">
       <TestimonialHeroComponent hero={hero} />
       <TestimonialTestimonyComponent {...testimony} />
     </div>

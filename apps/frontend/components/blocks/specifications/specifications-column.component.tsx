@@ -9,7 +9,7 @@ export const SpecificationsColumnComponent = ({
 }: ColumnLayout) => {
   return (
     <div
-      className={cn("min-w-[200px] flex-1 bg-white", {
+      className={cn("w-full min-w-[12.5rem]", {
         "border-divider rounded-2xl border shadow": isEmphasized,
       })}
     >
