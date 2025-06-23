@@ -20,7 +20,8 @@
         "blocks.features",
         "blocks.specifications",
         "blocks.testimonial",
-        "blocks.how-it-works"
+        "blocks.how-it-works",
+        "blocks.contact-us"
       ],
       "required": true
     }
