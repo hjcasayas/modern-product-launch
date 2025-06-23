@@ -28,6 +28,7 @@ export const BenefitsBlockComponent = ({
           src={url}
           alt={alternativeText ?? "Benefits Hero Image"}
           fill
+          sizes="100%"
         />
       </div>
     </section>

@@ -44,6 +44,7 @@ export const FeaturesCarouselComponent = ({
                 alt={image.alternativeText || "Carousel Image"}
                 fill
                 className="object-cover object-bottom"
+                sizes="100%"
               />
             </div>
           </div>
