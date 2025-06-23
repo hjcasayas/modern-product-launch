@@ -27,5 +27,5 @@
       ]
     }
   },
-  "postCreateCommand": "sudo chown -R node .pnpm-store node_modules apps/cms/node_modules apps/frontend/node_modules && .devcontainer/install.sh"
+  "postCreateCommand": "sudo chown -R node .pnpm-store node_modules apps/cms/node_modules apps/frontend/node_modules apps/frontend/.next && .devcontainer/install.sh"
 }
