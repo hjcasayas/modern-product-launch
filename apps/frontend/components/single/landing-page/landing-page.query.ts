@@ -181,6 +181,12 @@ export const landingPageQuery = gql`
             title
             description
           }
+          hero {
+            alternativeText
+            url
+            width
+            height
+          }
         }
       }
     }
