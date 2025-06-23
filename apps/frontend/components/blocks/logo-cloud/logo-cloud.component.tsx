@@ -1,7 +1,17 @@
 import { ImageLoader } from "@/components/image-loader";
 import { LogoCloudBlock } from "./logo-cloud.interface";
+import { StrapiBlock } from "@/interfaces/strapi/block.interface";
+import { StrapiBase } from "@/interfaces/strapi/base.interface";
 
-export const LogoCloudComponent = ({ title, logoClouds }: LogoCloudBlock) => {
+export interface LogoCloudBlockComponentProps
+  extends LogoCloudBlock,
+    StrapiBase,
+    StrapiBlock {}
+
+export const LogoCloudBlockComponent = ({
+  title,
+  logoClouds,
+}: LogoCloudBlockComponentProps) => {
   return (
     <section className="tablet:px-10 px-4 py-12">
       <h2 className="text-dim-gray text-center text-base leading-5 tracking-[-0.05em]">

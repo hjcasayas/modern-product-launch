@@ -1,12 +1,19 @@
-import { BenefitsComponent } from "./blocks/benefits/benefits.component";
-import { BenefitsBlock } from "./blocks/benefits/benefits.interface";
+import {
+  BenefitsBlockComponent,
+  BenefitsBlockComponentProps,
+} from "./blocks/benefits/benefits.component";
 import {
   HeroBlockComponentProps,
-  HeroComponent,
+  HeroBlockComponent,
 } from "./blocks/hero/hero.component";
-import { LogoCloudComponent } from "./blocks/logo-cloud/logo-cloud.component";
-import { LogoCloudBlock } from "./blocks/logo-cloud/logo-cloud.interface";
-import { FeaturesBlockComponent } from "./blocks/features/features.component";
+import {
+  LogoCloudBlockComponent,
+  LogoCloudBlockComponentProps,
+} from "./blocks/logo-cloud/logo-cloud.component";
+import {
+  FeaturesBlockComponent,
+  FeaturesBlockComponentProps,
+} from "./blocks/features/features.component";
 import { FeaturesBlock } from "./blocks/features/features.interface";
 import {
   SpecificationsBlockComponent,
@@ -25,9 +32,9 @@ export type BlockNameType = keyof typeof BlockNames;
 
 export type BlockRendererProps = (
   | HeroBlockComponentProps
-  | LogoCloudBlock
-  | BenefitsBlock
-  | FeaturesBlock
+  | LogoCloudBlockComponentProps
+  | BenefitsBlockComponentProps
+  | FeaturesBlockComponentProps
   | SpecificationsBlockComponentProps
 )[];
 
@@ -38,22 +45,27 @@ export const BlockRenderer = ({ blocks }: { blocks: BlockRendererProps }) => {
         switch (block.__typename) {
           case "ComponentBlocksHero": {
             const currentBlock = block as HeroBlockComponentProps;
-            return <HeroComponent key={currentBlock.id} {...currentBlock} />;
+            return (
+              <HeroBlockComponent key={currentBlock.id} {...currentBlock} />
+            );
           }
           case "ComponentBlocksLogoCloud": {
-            const currentBlock = block as LogoCloudBlock;
+            const currentBlock = block as LogoCloudBlockComponentProps;
             return (
-              <LogoCloudComponent key={currentBlock.id} {...currentBlock} />
+              <LogoCloudBlockComponent
+                key={currentBlock.id}
+                {...currentBlock}
+              />
             );
           }
           case "ComponentBlocksBenefits": {
-            const currentBlock = block as BenefitsBlock;
+            const currentBlock = block as BenefitsBlockComponentProps;
             return (
-              <BenefitsComponent key={currentBlock.id} {...currentBlock} />
+              <BenefitsBlockComponent key={currentBlock.id} {...currentBlock} />
             );
           }
           case "ComponentBlocksFeatures": {
-            const currentBlock = block as FeaturesBlock;
+            const currentBlock = block as FeaturesBlockComponentProps;
             return (
               <FeaturesBlockComponent key={currentBlock.id} {...currentBlock} />
             );

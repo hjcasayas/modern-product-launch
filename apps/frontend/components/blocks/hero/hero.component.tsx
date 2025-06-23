@@ -10,7 +10,7 @@ export interface HeroBlockComponentProps
     StrapiBase,
     StrapiBlock {}
 
-export const HeroComponent = ({
+export const HeroBlockComponent = ({
   headlines,
   mobileImage,
   tabletImage,

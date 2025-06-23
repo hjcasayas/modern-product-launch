@@ -5,7 +5,7 @@ import { StrapiImage } from "@/interfaces/strapi/image.interface";
 
 export interface LogoCloudsImage extends StrapiImage, StrapiComponentBase {}
 
-export interface LogoCloudBlock extends StrapiBase, StrapiBlock {
+export interface LogoCloudBlock {
   title: string;
   logoClouds: LogoCloudsImage[];
 }

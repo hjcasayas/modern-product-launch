@@ -1,15 +1,23 @@
+import { StrapiBlock } from "@/interfaces/strapi/block.interface";
 import { ImageLoader } from "@/components/image-loader";
-import { BenefitsBlock } from "./benefits.interface";
+import { StrapiBase } from "@/interfaces/strapi/base.interface";
+
 import { BenefitsHeadingComponent } from "./benefits-heading.component";
 import { BenefitsModulesComponent } from "./benefits-modules.component";
+import { BenefitsBlock } from "./benefits.interface";
 
-export const BenefitsComponent = ({
+export interface BenefitsBlockComponentProps
+  extends BenefitsBlock,
+    StrapiBase,
+    StrapiBlock {}
+
+export const BenefitsBlockComponent = ({
   title,
   headline,
   subTitle,
   modules,
   image: { url, alternativeText },
-}: BenefitsBlock) => {
+}: BenefitsBlockComponentProps) => {
   return (
     <section className="tablet:px-10 px-4 pb-[6.25rem] pt-20">
       <BenefitsHeadingComponent {...{ title, headline, subTitle }} />

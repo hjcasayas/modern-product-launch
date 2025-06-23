@@ -9,7 +9,7 @@ interface FeaturesCarouselImage extends StrapiImage, StrapiComponentBase {}
 
 interface FeaturesListItem extends ListItemElement, StrapiComponentBase {}
 
-export interface FeaturesBlock extends StrapiBase, StrapiBlock {
+export interface FeaturesBlock {
   headline: string;
   description: string;
   featuresList: FeaturesListItem[];

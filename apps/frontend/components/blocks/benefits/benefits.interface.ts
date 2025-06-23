@@ -3,10 +3,12 @@ import { StrapiBase } from "@/interfaces/strapi/base.interface";
 import { StrapiBlock } from "@/interfaces/strapi/block.interface";
 import { StrapiImage } from "@/interfaces/strapi/image.interface";
 
-export interface BenefitsBlock extends StrapiBase, StrapiBlock {
+export interface BenefitsBlockModules extends ModuleLayout, StrapiBase {}
+
+export interface BenefitsBlock {
   title: string;
   headline: string;
   subTitle: string;
-  modules: ModuleLayout[];
+  modules: BenefitsBlockModules[];
   image: StrapiImage;
 }

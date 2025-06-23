@@ -3,6 +3,13 @@ import { FeaturesListComponent } from "./features-list.component";
 import { FeaturesHeadingComponent } from "./features-heading.component";
 import { CtaComponent } from "@/components/elements/cta.component";
 import { FeaturesCarouselComponent } from "./features-carousel.component";
+import { StrapiBase } from "@/interfaces/strapi/base.interface";
+import { StrapiBlock } from "@/interfaces/strapi/block.interface";
+
+export interface FeaturesBlockComponentProps
+  extends FeaturesBlock,
+    StrapiBase,
+    StrapiBlock {}
 
 export const FeaturesBlockComponent = ({
   headline,
@@ -10,7 +17,7 @@ export const FeaturesBlockComponent = ({
   featuresList,
   cta,
   carousel,
-}: FeaturesBlock) => {
+}: FeaturesBlockComponentProps) => {
   return (
     <section className="tablet:pb-[7.5rem] tablet:px-10 px-4 pb-[6.25rem]">
       <div className="desktop:grid-cols-2 grid grid-cols-1 items-start gap-5">
