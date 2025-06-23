@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_specification_columns",
+  "info": {
+    "displayName": "Specification Column"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "list": {
+      "type": "component",
+      "component": "elements.list-item-text-with-icon",
+      "repeatable": true,
+      "required": true
+    },
+    "isEmphasized": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "config": {}
+}
