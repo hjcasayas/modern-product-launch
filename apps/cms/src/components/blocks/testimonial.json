@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_testimonials",
+  "info": {
+    "displayName": "Testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "hero": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "testimony": {
+      "type": "component",
+      "component": "layout.testimony",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}
