@@ -33,11 +33,11 @@ export const CtaComponent = ({
         <span>{label}</span>
         {icon != null ? (
           <ImageLoader
-            className="relative transition-all group-hover:-translate-y-2"
+            className="relative h-auto transition-all group-hover:-translate-y-2"
             src={icon.url}
             alt={icon.alternativeText ?? ""}
-            width={icon.width}
-            height={icon.height}
+            width={6}
+            height={6}
           />
         ) : null}
       </div>
