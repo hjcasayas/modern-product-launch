@@ -109,6 +109,41 @@ export const landingPageQuery = gql`
             }
           }
         }
+        ... on ComponentBlocksSpecifications {
+          __typename
+          id
+          title
+          headline
+          description
+          cta {
+            icon {
+              alternativeText
+              height
+              url
+              width
+            }
+            link {
+              href
+              label
+              isExternal
+            }
+          }
+          specifications {
+            id
+            isEmphasized
+            title
+            list {
+              id
+              text
+              icon {
+                alternativeText
+                height
+                url
+                width
+              }
+            }
+          }
+        }
       }
     }
   }
