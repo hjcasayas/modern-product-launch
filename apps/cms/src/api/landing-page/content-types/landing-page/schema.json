@@ -18,7 +18,8 @@
         "blocks.logo-cloud",
         "blocks.benefits",
         "blocks.features",
-        "blocks.specifications"
+        "blocks.specifications",
+        "blocks.testimonial"
       ],
       "required": true
     }
