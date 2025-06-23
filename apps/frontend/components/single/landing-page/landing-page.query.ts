@@ -144,6 +144,21 @@ export const landingPageQuery = gql`
             }
           }
         }
+        ... on ComponentBlocksTestimonial {
+          __typename
+          id
+          hero {
+            alternativeText
+            height
+            url
+            width
+          }
+          testimony {
+            name
+            occupation
+            quote
+          }
+        }
       }
     }
   }
