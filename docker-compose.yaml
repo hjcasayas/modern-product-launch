@@ -3,13 +3,13 @@ services:
     depends_on:
       - cms
     restart: unless-stopped
-    image: hjcasayas/browse-everything-frontend:v1.2.0
+    image: hjcasayas/browse-everything-frontend:v1.3.0
     build:
       context: .
       dockerfile: ./apps/frontend/Dockerfile
       tags:
         - hjcasayas/browse-everything-frontend:latest
-        - hjcasayas/browse-everything-frontend:v1.2.0
+        - hjcasayas/browse-everything-frontend:v1.3.0
       platforms:
         - linux/amd64
         - linux/arm64
@@ -17,13 +17,13 @@ services:
     depends_on:
       - db
     restart: unless-stopped
-    image: hjcasayas/browse-everything-cms:v1.2.0
+    image: hjcasayas/browse-everything-cms:v1.3.0
     build:
       context: .
       dockerfile: ./apps/cms/Dockerfile
       tags:
         - hjcasayas/browse-everything-cms:latest
-        - hjcasayas/browse-everything-cms:v1.2.0
+        - hjcasayas/browse-everything-cms:v1.3.0
       platforms:
         - linux/amd64
         - linux/arm64
