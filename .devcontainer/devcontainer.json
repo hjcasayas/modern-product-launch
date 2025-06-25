@@ -4,7 +4,7 @@
   "name": "Browse Everything with Strapi and Next.js",
   "dockerComposeFile": "docker-compose.yaml",
   "service": "dev-container",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceFolder": "/workspaces/modern-product-launch",
   "mounts": [
     {
       "source": "${localEnv:HOME}/.ssh",
@@ -27,5 +27,5 @@
       ]
     }
   },
-  "postCreateCommand": "sudo chown -R node .pnpm-store node_modules apps/cms/node_modules apps/frontend/node_modules apps/frontend/.next && .devcontainer/install.sh"
+  "postCreateCommand": "sudo chown -R node .pnpm-store node_modules apps/cms/node_modules apps/frontend/node_modules apps/frontend/.next apps/cms/dist && .devcontainer/install.sh"
 }

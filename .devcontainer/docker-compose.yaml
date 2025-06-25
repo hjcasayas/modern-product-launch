@@ -4,15 +4,15 @@ services:
       dockerfile: Dockerfile
       context: .
     volumes:
-      - ../:/workspaces/browse-everything:cached
-      - workspace-node_modules:/workspaces/browse-everything/node_modules
-      - workspace-pnpm-store:/workspaces/browse-everything/.pnpm-store
-      - frontend-node_modules:/workspaces/browse-everything/apps/frontend/node_modules
-      - frontend-next:/workspaces/browse-everything/apps/frontend/.next
-      - cms-node_modules:/workspaces/browse-everything/apps/cms/node_modules
-      - cms-dist:/workspaces/browse-everything/apps/cms/dist
-      - cms-strapi:/workspaces/browse-everything/apps/cms/.strapi
-      - cms-types:/workspaces/browse-everything/apps/cms/types
+      - ../:/workspaces/modern-product-launch:cached
+      - workspace-node_modules:/workspaces/modern-product-launch/node_modules
+      - workspace-pnpm-store:/workspaces/modern-product-launch/.pnpm-store
+      - workspace-next:/app/apps/frontend/.next
+      - workspace-dist:/workspaces/modern-product-launch/apps/cms/dist
+      - frontend-node_modules:/workspaces/modern-product-launch/apps/frontend/node_modules
+      - cms-node_modules:/workspaces/modern-product-launch/apps/cms/node_modules
+      - cms-strapi:/workspaces/modern-product-launch/apps/cms/.strapi
+      - cms-types:/workspaces/modern-product-launch/apps/cms/types
     command: sleep infinity
     depends_on:
       - db
@@ -25,7 +25,7 @@ services:
       - ../:/app
       - workspace-node_modules:/app/node_modules
       - workspace-pnpm-store:/app/.pnpm-store
-      - workspace-next:/app/apps/frontend/.next
+      - frontend-next:/app/apps/frontend/.next
       - frontend-node_modules:/app/apps/frontend/node_modules
       - cms-node_modules:/app/apps/cms/node_modules
       - cms-dist:/app/apps/cms/dist
@@ -73,6 +73,7 @@ volumes:
   workspace-node_modules:
   workspace-pnpm-store:
   workspace-next:
+  workspace-dist:
   frontend-node_modules:
   frontend-next:
   cms-node_modules:
