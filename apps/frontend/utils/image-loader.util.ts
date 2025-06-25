@@ -1,9 +1,10 @@
 import { ImageLoader, ImageLoaderProps } from "next/image";
+import { getStrapiImage } from "./get-strapi-image.util";
 
 export const imageLoaderProp: ImageLoader = ({
   src,
   width,
   quality,
 }: ImageLoaderProps) => {
-  return `${src}?w=${width}&q=${quality || 75}`;
+  return `${getStrapiImage(src)}?w=${width}&q=${quality || 75}`;
 };
