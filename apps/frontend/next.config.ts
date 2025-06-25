@@ -27,6 +27,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/uploads/:path*",
+        destination: `http://cms:1337/uploads/:path*`,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
