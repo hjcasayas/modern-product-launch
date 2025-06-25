@@ -18,6 +18,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/admin",
+        destination: `${process.env.NEXT_PUBLIC_STRAPI_URL!}/admin`,
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
