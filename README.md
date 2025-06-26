@@ -1,4 +1,4 @@
-# Browse Everything
+# Modern Product Launch
 
 A modern landing page for product launch designed by Figma.
 
