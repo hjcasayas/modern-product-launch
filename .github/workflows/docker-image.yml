@@ -1,0 +1,19 @@
+name: Build and Push Images to Docker Hub
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker compose build
+    - name: Push the Docker image
+      run: | 
+        docker login -u hjcasayas -p ${{ secrets.DOCKER_HUB_TOKEN }}
+        docker compose build
