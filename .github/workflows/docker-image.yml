@@ -3,8 +3,13 @@ name: Build and Push Images to Docker Hub
 on:
   push:
     branches: [ "master" ]
+    paths: 
+      - 'docker-compose.yaml'
   pull_request:
     branches: [ "master" ]
+    paths: 
+      - 'docker-compose.yaml'
+    
 
 jobs:
   build:
