@@ -4,8 +4,8 @@ A modern landing page for product launch designed by Figma.
 
 ## Production
 
-1. [Frontend (Next.js)](https://browse-everything.hjcasayas.info)
-1. [Headless CMC (Strapi)](https://browse-everything-cms.hjcasayas.info)
+1. [Frontend (Next.js)](https://modern-product-launch.hjcasayas.info)
+1. [Headless CMC (Strapi)](https://strapi-modern-product-launch.hjcasayas.info)
 1. [Figma Design](https://www.figma.com/community/file/1487309170684591074/modern-product-launch)
 
 ## Technologies used
