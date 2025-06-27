@@ -9,6 +9,7 @@ on:
     branches: [ "master" ]
     paths: 
       - 'docker-compose.yaml'
+  workflow_dispatch:
     
 
 jobs:
