@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-  "name": "Browse Everything with Strapi and Next.js",
+  "name": "Modern Product Launch",
   "dockerComposeFile": "docker-compose.yaml",
   "service": "dev-container",
   "workspaceFolder": "/workspaces/modern-product-launch",
@@ -23,7 +23,8 @@
         "ms-azuretools.vscode-docker",
         "GitHub.copilot",
         "GitHub.copilot-chat",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "GitHub.vscode-github-actions"
       ]
     }
   },
