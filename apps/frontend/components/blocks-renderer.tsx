@@ -58,19 +58,19 @@ export type BlockRendererProps = (
 export const BlockRenderer = ({ blocks }: { blocks: BlockRendererProps }) => {
   return (
     <>
-      {blocks.map((block) => {
+      {blocks.map((block, index) => {
         switch (block.__typename) {
           case "ComponentBlocksHero": {
             const currentBlock = block as HeroBlockComponentProps;
             return (
-              <HeroBlockComponent key={currentBlock.id} {...currentBlock} />
+              <HeroBlockComponent key={index} {...currentBlock} />
             );
           }
           case "ComponentBlocksLogoCloud": {
             const currentBlock = block as LogoCloudBlockComponentProps;
             return (
               <LogoCloudBlockComponent
-                key={currentBlock.id}
+                key={index}
                 {...currentBlock}
               />
             );
@@ -78,20 +78,20 @@ export const BlockRenderer = ({ blocks }: { blocks: BlockRendererProps }) => {
           case "ComponentBlocksBenefits": {
             const currentBlock = block as BenefitsBlockComponentProps;
             return (
-              <BenefitsBlockComponent key={currentBlock.id} {...currentBlock} />
+              <BenefitsBlockComponent key={index} {...currentBlock} />
             );
           }
           case "ComponentBlocksFeatures": {
             const currentBlock = block as FeaturesBlockComponentProps;
             return (
-              <FeaturesBlockComponent key={currentBlock.id} {...currentBlock} />
+              <FeaturesBlockComponent key={index} {...currentBlock} />
             );
           }
           case "ComponentBlocksSpecifications": {
             const currentBlock = block as SpecificationsBlockComponentProps;
             return (
               <SpecificationsBlockComponent
-                key={currentBlock.id}
+                key={index}
                 {...currentBlock}
               />
             );
@@ -100,7 +100,7 @@ export const BlockRenderer = ({ blocks }: { blocks: BlockRendererProps }) => {
             const currentBlock = block as TestimonialBlockComponentProps;
             return (
               <TestimonialBlockComponent
-                key={currentBlock.id}
+                key={index}
                 {...currentBlock}
               />
             );
@@ -109,7 +109,7 @@ export const BlockRenderer = ({ blocks }: { blocks: BlockRendererProps }) => {
             const currentBlock = block as HowItWorksBlockComponentProps;
             return (
               <HowItWorksBlockComponent
-                key={currentBlock.id}
+                key={index}
                 {...currentBlock}
               />
             );
@@ -118,7 +118,7 @@ export const BlockRenderer = ({ blocks }: { blocks: BlockRendererProps }) => {
             const currentBlock = block as ContactUsBlockComponentProps;
             return (
               <ContactUsBlockComponent
-                key={currentBlock.id}
+                key={index}
                 {...currentBlock}
               />
             );
