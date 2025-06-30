@@ -1,8 +1,8 @@
 services:
   frontend:
-    depends_on:
-      - cms
-    restart: unless-stopped
+    # depends_on:
+    #   - cms
+    # restart: unless-stopped
     image: hjcasayas/modern-product-launch-frontend:v1.5.0
     build:
       context: .
@@ -13,9 +13,9 @@ services:
       platforms:
         - linux/amd64
   cms:
-    depends_on:
-      - db
-    restart: unless-stopped
+    # depends_on:
+    #   - db
+    # restart: unless-stopped
     image: hjcasayas/modern-product-launch-cms:v1.5.0
     build:
       context: .
@@ -25,33 +25,33 @@ services:
         - hjcasayas/modern-product-launch-cms:v1.5.0
       platforms:
         - linux/amd64
-  db:
-    image: postgres
-    restart: always
-    shm_size: 128mb
-    env_file:
-      - ./.env
-    environment:
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_DB=${POSTGRES_DB}
-    volumes:
-      - prod-postgres-data:/var/lib/postgresql/data
-  cloudflare-fe:
-    image: cloudflare/cloudflared
-    restart: unless-stopped
-    command: tunnel run
-    env_file:
-      - ./.env
-    environment:
-      - TUNNEL_TOKEN=${TUNNEL_TOKEN_FE}
-  cloudflare-cms:
-    image: cloudflare/cloudflared
-    restart: unless-stopped
-    command: tunnel run
-    env_file:
-      - ./.env
-    environment:
-      - TUNNEL_TOKEN=${TUNNEL_TOKEN_CMS}
-volumes:
-  prod-postgres-data:
+  # db:
+  #   image: postgres
+  #   restart: always
+  #   shm_size: 128mb
+  #   env_file:
+  #     - ./.env
+  #   environment:
+  #     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+  #     - POSTGRES_USER=${POSTGRES_USER}
+  #     - POSTGRES_DB=${POSTGRES_DB}
+  #   volumes:
+  #     - prod-postgres-data:/var/lib/postgresql/data
+  # cloudflare-fe:
+  #   image: cloudflare/cloudflared
+  #   restart: unless-stopped
+  #   command: tunnel run
+  #   env_file:
+  #     - ./.env
+  #   environment:
+  #     - TUNNEL_TOKEN=${TUNNEL_TOKEN_FE}
+  # cloudflare-cms:
+  #   image: cloudflare/cloudflared
+  #   restart: unless-stopped
+  #   command: tunnel run
+  #   env_file:
+  #     - ./.env
+  #   environment:
+  #     - TUNNEL_TOKEN=${TUNNEL_TOKEN_CMS}
+# volumes:
+#   prod-postgres-data:
