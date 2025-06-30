@@ -1,0 +1,70 @@
+services:
+  frontend:
+    depends_on:
+      - cms
+    restart: unless-stopped
+    image: hjcasayas/modern-product-launch-frontend:v1.5.0
+    env_file:
+      - ./.env
+    environment:
+      - NEXT_PUBLIC_STRAPI_URL=${NEXT_PUBLIC_STRAPI_URL}
+      - STRAPI_GRAPHQL_ENDPOINT=${STRAPI_GRAPHQL_ENDPOINT}
+
+  cms:
+    depends_on:
+      - db
+    restart: unless-stopped
+    image: hjcasayas/modern-product-launch-cms:v1.5.0
+    env_file:
+      - ./.env
+    environment:
+      - APP_KEYS=${APP_KEYS}
+      - API_TOKEN_SALT=${API_TOKEN_SALT}
+      - ADMIN_JWT_SECRET=${ADMIN_JWT_SECRET}
+      - TRANSFER_TOKEN_SALT=${TRANSFER_TOKEN_SALT}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+      - DATABASE_CLIENT=${DATABASE_CLIENT}
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_PORT=${DATABASE_PORT}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_USERNAME=${DATABASE_USERNAME}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - DATABASE_SSL=${DATABASE_SSL}
+      - DATABASE_FILENAME=
+      - JWT_SECRET=${JWT_SECRET}
+      - STRAPI_TRANSFER_URL=${STRAPI_TRANSFER_URL}
+      - STRAPI_TRANSFER_TOKEN=${STRAPI_TRANSFER_TOKEN}
+
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    env_file:
+      - ./.env
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - prod-postgres-data:/var/lib/postgresql/data
+
+  cloudflare-fe:
+    image: cloudflare/cloudflared
+    restart: unless-stopped
+    command: tunnel run
+    env_file:
+      - ./.env
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN_FE}
+
+  cloudflare-cms:
+    image: cloudflare/cloudflared
+    restart: unless-stopped
+    command: tunnel run
+    env_file:
+      - ./.env
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN_CMS}
+
+volumes:
+  prod-postgres-data:
