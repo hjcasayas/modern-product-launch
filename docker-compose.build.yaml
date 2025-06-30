@@ -9,6 +9,8 @@ services:
         - hjcasayas/modern-product-launch-frontend:v1.5.4
       platforms:
         - linux/amd64
+    environment:
+      - NEXT_PUBLIC_STRAPI_URL=${NEXT_PUBLIC_STRAPI_URL}
   cms:
     image: hjcasayas/modern-product-launch-cms:v1.5.4
     build:
