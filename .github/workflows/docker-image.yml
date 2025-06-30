@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v4
     - name: Build the Docker image
-      run: docker compose -f docker-compose.build.yaml --build-arg NEXT_PUBLIC_STRAPI_URL=${{ secrets.NEXT_PUBLIC_STRAPI_URL }} build
+      run: docker compose -f docker-compose.build.yaml build --build-arg NEXT_PUBLIC_STRAPI_URL=${{ secrets.NEXT_PUBLIC_STRAPI_URL }}
     - name: Push the Docker image
       run: | 
         docker login -u hjcasayas -p ${{ secrets.DOCKER_HUB_TOKEN }}
