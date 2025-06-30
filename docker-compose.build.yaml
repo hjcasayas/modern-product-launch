@@ -1,23 +1,23 @@
 services:
   frontend:
-    image: hjcasayas/modern-product-launch-frontend:v1.5.4
+    image: hjcasayas/modern-product-launch-frontend:v1.5.5
     build:
       context: .
       dockerfile: ./apps/frontend/Dockerfile
       tags:
         - hjcasayas/modern-product-launch-frontend:latest
-        - hjcasayas/modern-product-launch-frontend:v1.5.4
+        - hjcasayas/modern-product-launch-frontend:v1.5.5
       platforms:
         - linux/amd64
     environment:
       - NEXT_PUBLIC_STRAPI_URL=${NEXT_PUBLIC_STRAPI_URL}
   cms:
-    image: hjcasayas/modern-product-launch-cms:v1.5.4
+    image: hjcasayas/modern-product-launch-cms:v1.5.5
     build:
       context: .
       dockerfile: ./apps/cms/Dockerfile
       tags:
         - hjcasayas/modern-product-launch-cms:latest
-        - hjcasayas/modern-product-launch-cms:v1.5.4
+        - hjcasayas/modern-product-launch-cms:v1.5.5
       platforms:
         - linux/amd64
