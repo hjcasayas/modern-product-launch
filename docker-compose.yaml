@@ -3,26 +3,26 @@ services:
     depends_on:
       - cms
     restart: unless-stopped
-    image: hjcasayas/modern-product-launch-frontend:v1.4.0
+    image: hjcasayas/modern-product-launch-frontend:v1.5.0
     build:
       context: .
       dockerfile: ./apps/frontend/Dockerfile
       tags:
         - hjcasayas/modern-product-launch-frontend:latest
-        - hjcasayas/modern-product-launch-frontend:v1.4.0
+        - hjcasayas/modern-product-launch-frontend:v1.5.0
       platforms:
         - linux/amd64
   cms:
     depends_on:
       - db
     restart: unless-stopped
-    image: hjcasayas/modern-product-launch-cms:v1.4.0
+    image: hjcasayas/modern-product-launch-cms:v1.5.0
     build:
       context: .
       dockerfile: ./apps/cms/Dockerfile
       tags:
         - hjcasayas/modern-product-launch-cms:latest
-        - hjcasayas/modern-product-launch-cms:v1.4.0
+        - hjcasayas/modern-product-launch-cms:v1.5.0
       platforms:
         - linux/amd64
   db:
