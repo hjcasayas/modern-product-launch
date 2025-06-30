@@ -14,10 +14,10 @@
     "build:cms": "pnpm --filter @modern-product-launch/cms run build",
     "start:cms": "pnpm --filter @modern-product-launch/cms run start",
     "prettier-watch": "onchange \"apps/frontend/**/*.{tsx,css}\" -- prettier --write --ignore-unknown {{changed}}",
-    "docker:build": "docker compose build frontend cms",
-    "docker:push": "docker compose push frontend cms",
-    "docker:up": "docker compose up -d",
-    "docker:down": "docker compose down"
+    "docker:build": "docker compose -f docker-compose.build.yaml build frontend cms",
+    "docker:push": "docker compose -f docker-compose.build.yaml push frontend cms",
+    "docker:up": "docker compose -f docker-compose.deploy.yaml up -d",
+    "docker:down": "docker compose -f docker-compose.deploy.yaml down"
   },
   "repository": {
     "type": "git",
