@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: ./apps/frontend/Dockerfile
+      args:
+        NEXT_PUBLIC_STRAPI_URL: ${NEXT_PUBLIC_STRAPI_URL} 
       tags:
         - hjcasayas/modern-product-launch-frontend:latest
         - hjcasayas/modern-product-launch-frontend:v1.5.6
