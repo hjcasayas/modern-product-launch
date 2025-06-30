@@ -14,8 +14,8 @@
     "build:cms": "pnpm --filter @modern-product-launch/cms run build",
     "start:cms": "pnpm --filter @modern-product-launch/cms run start",
     "prettier-watch": "onchange \"apps/frontend/**/*.{tsx,css}\" -- prettier --write --ignore-unknown {{changed}}",
-    "docker:build": "docker compose build",
-    "docker:push": "docker compose push",
+    "docker:build": "docker compose build frontend cms",
+    "docker:push": "docker compose push frontend cms",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down"
   },
